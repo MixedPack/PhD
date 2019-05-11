@@ -6,25 +6,21 @@ import pyfits
 import math
 
 #The list of Good SAMI_2015&2016 galaxies - with their FCC and FDS names
-with open( '../0_data/FCC_FDS_1516.csv', 'r' ) as f:
+with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
     name = csv.reader(f)
     name_list = list(map(tuple, name))
-with open('../0_data/FCC_FDS_18.csv', 'r') as f:
-    name2 = csv.reader(f)
-    name_list2 = list(map(tuple, name2))
 
-name_list.extend(name_list2)
 size = len(name_list)
 
 #Online Vizier Catalog - Ferguson
-hdulist_Ferguson = pyfits.open('./FergusonCatalog.fit')
+hdulist_Ferguson = pyfits.open('../0_data/Literature/FergusonCatalog.fit')
 
-#Aku's Catalog (2018) - Fornax Cluster Galaxies
-hdulist_Aku = pyfits.open('./fds_cluster.fits')
-tbdata_Aku = hdulist_Aku[1].data
+#FDS's Catalog (2018) - Fornax Cluster Galaxies
+hdulist_FDS = pyfits.open('../0_data/Literature/FDSCatalog.fits')
+tbdata_FDS = hdulist_FDS[1].data
 
 
-#importing information from Aku's catalog
+#importing information from FDS's catalog
 abs_mag_r = np.zeros(size)
 R_eff = np.zeros(size)
 surface_bright = np.zeros(size)
@@ -43,18 +39,18 @@ for l in range(size):
 	name_FCC = 'FCC'+str(draft[0])
 	name_FDS = 'FDS'+str(draft[1])+'_DWARF'+str("{0:0=3d}".format(int(draft[2])))
 	
-	for j in range(len(tbdata_Aku.field('target'))):
-		if tbdata_Aku.field('target')[j]==name_FDS:
-			RA[l] = tbdata_Aku.field('RA')[j]
-			DEC[l] = tbdata_Aku.field('DEC')[j]
-			abs_mag_r[l] = tbdata_Aku.field('r_mag')[j] - 31.0
-			R_eff[l] = tbdata_Aku.field('Reff')[j]
-			axis_ratio[l] = tbdata_Aku.field('axis_ratio')[j]
-			surface_bright[l] = tbdata_Aku.field('r_mag')[j] + 2.5 * np.log10(math.pi*axis_ratio[l]*math.pow(R_eff[l],2)) + 2.5 * np.log10(2)
-			u[l] = tbdata_Aku.field('u')[j]
-			g[l] = tbdata_Aku.field('g')[j]
-			r[l] = tbdata_Aku.field('r')[j]
-			i[l] = tbdata_Aku.field('i')[j]
+	for j in range(len(tbdata_FDS.field('target'))):
+		if tbdata_FDS.field('target')[j]==name_FDS:
+			RA[l] = tbdata_FDS.field('RA')[j]
+			DEC[l] = tbdata_FDS.field('DEC')[j]
+			abs_mag_r[l] = tbdata_FDS.field('r_mag')[j] - 31.0
+			R_eff[l] = tbdata_FDS.field('Reff')[j]
+			axis_ratio[l] = tbdata_FDS.field('axis_ratio')[j]
+			surface_bright[l] = tbdata_FDS.field('r_mag')[j] + 2.5 * np.log10(math.pi*axis_ratio[l]*math.pow(R_eff[l],2)) + 2.5 * np.log10(2)
+			u[l] = tbdata_FDS.field('u')[j]
+			g[l] = tbdata_FDS.field('g')[j]
+			r[l] = tbdata_FDS.field('r')[j]
+			i[l] = tbdata_FDS.field('i')[j]
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*abs_mag_r[l] + 0.4*(r[l]-i[l])
 			#stellar_mass[l] = math.pow(10,log_mass[l]) # in solar mass unit
 
@@ -69,7 +65,7 @@ for l in range(size):
 			'r':"%.4f" % r[l], 'i':"%.4f" % i[l]}
 	ListDict.append(dict.copy())
 
-with open('Galaxies_Table.csv', 'w') as output_file:
+with open('../2_pipeline/0_Galaxies_Table/Galaxies_Table.csv', 'w') as output_file:
     dict_writer = csv.DictWriter(output_file, dict.keys())
     dict_writer.writeheader()
     dict_writer.writerows(ListDict)
