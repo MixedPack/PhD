@@ -15,12 +15,9 @@ size = len(name_list)
 #Online Vizier Catalog - Ferguson
 hdulist_Ferguson = pyfits.open('../0_data/Literature/FergusonCatalog.fit')
 
-#FDS's Catalog (2018) (faint and giant Fornax galaxies)
-hdulist_FDS = pyfits.open('../0_data/Literature/FDSCatalog_ALL.fits')
+#FDS's Catalog (2018) (faint and giant Fornax galaxies with their errors)
+hdulist_FDS = pyfits.open('../0_data/Literature/FDSCatalog_AllError.fits')
 tbdata_FDS = hdulist_FDS[1].data
-#FDS catalog with errors (only dwarfs)
-hdulist_FDSerr = pyfits.open('../0_data/Literature/FDSCatalog_DwarfErr.fit')
-tbdata_FDSerr = hdulist_FDSerr[1].data
 
 COV_mr_logRe2 = -0.00528375
 
@@ -43,30 +40,28 @@ r = np.zeros(size)
 i = np.zeros(size)
 
 for l in range(size):
+
 	draft = name_list[l]
 	name_FCC = 'FCC'+str(draft[0])
 	name_FDS = 'FDS'+str(draft[1])+'_DWARF'+str("{0:0=3d}".format(int(draft[2])))
 	
-	for j in range(len(tbdata_FDS.field('target'))):
-		if tbdata_FDS.field('target')[j]==name_FDS:
+	for j in range(len(tbdata_FDS.field('Target'))):
+		if tbdata_FDS.field('Target')[j]==name_FDS:
 			RA[l] = tbdata_FDS.field('RA')[j]
 			DEC[l] = tbdata_FDS.field('DEC')[j]
 			M_r[l] = tbdata_FDS.field('r_mag')[j] - 31.0
-			R_eff[l] = tbdata_FDS.field('Reff')[j]
-			axis_ratio[l] = tbdata_FDS.field('axis_ratio')[j]
+			ERR_m_r[l] = tbdata_FDS.field('r_mag_e')[j]
+			R_eff[l] = tbdata_FDS.field('reff')[j]
+			ERR_R_eff[l] = tbdata_FDS.field('reff_e')[j]
+			axis_ratio[l] = tbdata_FDS.field('arat')[j]
 			mu_r[l] = tbdata_FDS.field('r_mag')[j] + 2.5 * np.log10(math.pi*axis_ratio[l]*math.pow(R_eff[l],2)) + 2.5 * np.log10(2)
+			ERR_mu_r[l] = ERR_m_r[l] + (5 / np.log(10)) * (ERR_R_eff[l] / R_eff[l]) + 2.5 * COV_mr_logRe2
 			u[l] = tbdata_FDS.field('u')[j]
 			g[l] = tbdata_FDS.field('g')[j]
 			r[l] = tbdata_FDS.field('r')[j]
 			i[l] = tbdata_FDS.field('i')[j]
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
-			#stellar_mass[l] = math.pow(10,log_mass[l]) # in solar mass unit
-	for k in range(len(tbdata_FDSerr.field('Target'))):	
-		if tbdata_FDSerr.field('Target')[k]==name_FDS:
-			ERR_m_r[l] = tbdata_FDSerr.field('e_rmag')[k]
-			ERR_R_eff[l] = tbdata_FDSerr.field('e_reff')[k]
-			R_eff[l] = tbdata_FDSerr.field('reff')[k]
-			ERR_mu_r[l] = ERR_m_r[l] + (5/np.log(10))*(ERR_R_eff[l]/R_eff[l])+2.5*COV_mr_logRe2
+
 			
 #writing a csv output
 ListDict = []
