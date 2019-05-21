@@ -4,6 +4,7 @@ from astropy.io import fits
 import csv
 import pyfits
 import math
+from numpy.polynomial.polynomial import polyfit
 
 #The list of Good SAMI_2015&2016 galaxies - with their FCC and FDS names
 with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
@@ -62,7 +63,21 @@ for l in range(size):
 			i[l] = tbdata_FDS.field('i')[j]
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
 
-			
+xFit = [g[k]-r[k] for k in range(size) if u[k]-g[k] > 0.0]
+yFit = [u[k]-g[k] for k in range(size) if u[k]-g[k] > 0.0]
+b, m = polyfit(xFit, yFit, 1)
+Fitline = [b + m * xFit[k] for k in range(len(xFit))]
+plt.plot(xFit, yFit, '.')
+plt.plot(xFit, Fitline, c='grey')
+
+for l in range(size):
+	draft = name_list[l]
+	name_FCC = 'FCC' + str(draft[0])
+	if name_FCC=='FCC37' or name_FCC=='FCC46' or name_FCC=='FCC33' or name_FCC=='FCC29':
+			u[l] = g[l] + b + (g[l]-r[l])*m
+			plt.plot(g[l]-r[l], u[l]-g[l], 'x')
+plt.show()
+
 #writing a csv output
 ListDict = []
 for l in range(size):
