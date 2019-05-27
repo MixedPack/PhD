@@ -33,6 +33,7 @@ log_mass = np.zeros(size)
 ERR_m_r = np.zeros(size)
 ERR_mu_r = np.zeros(size)
 ERR_R_eff = np.zeros(size)
+sersic_index = np.zeros(size)
 
 #stellar_mass = np.zeros(size)
 u = np.zeros(size)
@@ -62,6 +63,7 @@ for l in range(size):
 			r[l] = tbdata_FDS.field('r')[j]
 			i[l] = tbdata_FDS.field('i')[j]
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
+			sersic_index[l] = tbdata_FDS.field('n')[j]
 
 xFit = [g[k]-r[k] for k in range(size) if u[k]-g[k] > 0.0]
 yFit = [u[k]-g[k] for k in range(size) if u[k]-g[k] > 0.0]
@@ -86,7 +88,7 @@ for l in range(size):
 			 'M_r(mag)':"%.2f" % M_r[l], 'ERR_m_r(mag)':"%.2f" % ERR_m_r[l] ,
 			'mu_r(mag/arcsec2)':"%.2f" % mu_r[l], 'ERR_mu_r(mag/arcsec2)':"%.2f" % ERR_mu_r[l] , 
 			'R_e(arcsec)':"%.2f" % R_eff[l], 'ERR_R_e(arcsec)':"%.2f" % ERR_R_eff[l] , 
-			'axis_ratio':"%.2f" % axis_ratio[l], 'log10(M_*/M_sun)':"%.4f" % log_mass[l],  
+			'axis_ratio':"%.2f" % axis_ratio[l], 'Sersic_index':"%.2f" % sersic_index[l],'log10(M_*/M_sun)':"%.4f" % log_mass[l],
 			'u':"%.4f" % u[l], 'g':"%.4f" % g[l], 'r':"%.4f" % r[l], 'i':"%.4f" % i[l]}
 	ListDict.append(dict.copy())
 
