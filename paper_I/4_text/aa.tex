@@ -1,0 +1,947 @@
+%                                                                 aa.dem
+% AA vers. 8.2, LaTeX class for Astronomy & Astrophysics
+% demonstration file
+%                                                       (c) EDP Sciences
+%-----------------------------------------------------------------------
+%
+%\documentclass[referee]{aa} % for a referee version
+%\documentclass[onecolumn]{aa} % for a paper on 1 column  
+%\documentclass[longauth]{aa} % for the long lists of affiliations 
+%\documentclass[rnote]{aa} % for the research notes
+%\documentclass[letter]{aa} % for the letters 
+%\documentclass[bibyear]{aa} % if the references are not structured 
+% according to the author-year natbib style
+
+%
+\documentclass{aa}  
+\usepackage{caption}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{txfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[options]{hyperref}
+% To add links in your PDF file, use the package "hyperref"
+% with options according to your LaTeX or PDFLaTeX drivers.
+%
+\begin{document} 
+
+
+   \title{Spectroscopic Analysis of Fornax Dwarf Galaxies}
+
+   \subtitle{I. Kinematics \& Kinematic Scaling Relation}
+
+   \author{F. S. Eftekhari\inst{1,2}, R. Peletier\inst{1}, S. Mieske\inst{2}, \and N. Scott\inst{3} }
+
+   \institute{Kapteyn Astronomical Institute, Postbus 800, 9700 AV Groningen, The Netherlands
+         \and
+             European Southern Observatory, Alonso de C$\acute{o}$rdova 3107, Vitacura, Santiago, Chile    
+         \and
+             ??}
+
+   \date{Received October 1, 2019; accepted March 15, 2020}
+
+% \abstract{}{}{}{}{} 
+% 5 {} token are mandatory
+ 
+  \abstract
+  % context heading (optional)
+  % {} leave it empty if necessary  
+   {\bigskip}
+  % aims heading (mandatory)
+   {\bigskip}
+  % methods heading (mandatory)
+   {\bigskip}
+  % results heading (mandatory)
+   {\bigskip}
+  % conclusions heading (optional), leave it empty if necessary 
+   {}
+
+   \keywords{\bigskip}
+
+   \maketitle
+%
+%________________________________________________________________
+
+\section{Introduction}
+
+   Still after decades of studying dwarf galaxies, the formation and evolution of these objects is considered an active debate. Over the past few years, alongside improvement of observation the idea behind the lifeline of these faint and small objects had become clearer (e.g. Ry$\acute{s}$ et al. 2013, Toloba et al. 2015, Venhola et al. 2018). However, the need for more detailed and precise data to close this debate is still on the table. Thus with high resolution multiplexing deep-SAMI data cubes and statistically significant sample of dEs in Fornax cluster, we've started a new journey to collect new information from kinematics, chemical composition and structure of these faint objects. \\Why studying these faint objects is important, how we approached these questions, and what new results and clues are accomplished are the questions which are going to be investigated in this research. This is the first paper of the Spectroscopic Analysis of Fornax Dwarf Galaxies series, and is dedicated to kinematic studies of dwarf early-type galaxies within Fronax galaxy cluster. The section 1 will continue to inspect why dwarf galaxies received lots of attention in the past decades. Section 2 will be dedicated to the details of our data and its comparison to previous observations. In section 3 \& 4, we'll explain the methods that have been used and our results respectively. Finally, Section 5 will present the discussion and conclusions.   
+\subsection{Why Dwarfs?}
+
+Different theories and ideas about the formation history of the big zoo of galaxies have been developed in the past decades. For galaxies inside clusters one of the main mechanisms governing their formation and evolution is environmental effects such as ram-pressure stripping (Lin \& Faber 1983), harassment (Moore et al. 1998), or starvation (Larson et al. 1980). An ideal source to investigate the role of environment are dwarf galaxies, since they have low mass and low density and thus are more vulnerable to environmental effects. \\
+Dwarf galaxies despite their plain appearance and smooth light distribution have complex characteristics (Lisker 2006), which indicate the influence of environment in their past. \\ \textit{Spatial distribution of dwarfs}: early-type dwarf galaxies (dEs) outnumber all other galaxy types in dense environment, like clusters, while late-type low-luminosity galaxies are the dominant population in the fields (e.g. Dressler 1980, Sandage et al. 1985, and Ferguson \& Bingelli 1994).\\ \textit{Inner structure vs. local density of dEs}: A substructure-density relation is seen in early-type dwarf galaxies, such that dEs with blue center or no nucleus are mostly found in low-density cluster regions, dEs with disks in intermediate-density regions, and nucleated dEs in high-density regions of the cluster (Ferguson \& Sandage 1989, van den Bergh 1986, and Lisker et al. 2007). \\ \textit{Color vs. local density of dEs}: dEs in higher density regions are redder compared to other regions (Lisker et al. 2008). \\ \textit{Kinematics vs. local density of dEs}: pressure supported dEs are mostly found in high density regions of cluster, whereas in lower density regions like outskirts the angular momentum of dEs increases and dEs are largely rotationally supported. Also fast rotators in the outer part of the cluster rotate faster than fast rotators in the inner parts of the cluster (Toloba et al. 2009, van Zee et al. 2004a, and Toloba et al. 2015).\\
+Dwarf galaxies's formation history is another key to the formation and evolution of galaxies; whether dwarf galaxies are the descendants in hierarchical structure formation (Moore et al. 1999) and were created by gravitational collapse like other galaxies (Kauffmann \& White 1993), or whether they were formed at later epoch from late-type low-luminosity star forming galaxies by environmental effects (Boselli \& Gavazzi 2006, Gavazzi et al. 2013, and Boselli \& Favazzi 2014). The answer to these questions could be achieved by pursuing the behaviour and location of these galaxies inside galaxy physical parameter space. \\ \textit{Surface brightness profile}: logarithm of the S$\acute{e}$rsic index of both dwarfs and giant early-type galaxies linearly increases with central surface brightness and magnitude, but SB profiles of dEs are less steep than massive ellipticals (Gavazzi et al. 2005, Graham \& Guzm$\acute{a}$n 2013, and Young \& Currie 1994). \\ \textit{Color magnitude relation}: there is no gap seen between dwarfs and giant ellipticals in color magnitude profile (e.g. Ferrarese et al. 2006, Janz \& Lisker 2009, and Misgeld et al. 2008\&2009). \\ \textit{Fundamental plane}: inside fundamental plane it's been seen that dEs are offset with respect to the plane of early-type galaxies (Toloba et al. 2012 and Rijcke et al. 2015). \\ \textit{Disky substructure}: disk-like structures have been seen in fast rotators and dEs in the outer regions of cluster, also they have rotation curves similar to those of late-type galagixes (Toloba et al. 2015 and Toloba et al. 2009). \\ \textit{Star formation}: As the galay's luminosity decreases the duration of star formation increases (Gavazzi et al. 2002), also $H_\beta$ absorption index increases from giants to dwarfs as luminosity and velocity dispersion decreases (Poggianti et al. 2001 and Geha et al 2003).  
+
+
+
+
+
+
+
+
+%__________________________________________________________________
+
+\section{Data}
+
+The SAMI Fornax project started in 2015 with the Sydney-AAO Multi-Object Integral-field (SAMI) spectrograph on the Anglo-Australian Telescope (AAT), with aim of studying the origin and the inner workings of dwarf galaxies inside Fornax cluster. As results of total ?? allocated nights in 2015B, 2016B and 2018B, we have ?? dwarf galaxies, ?? giant elliptical galaxies with good spectra.\\
+SAMI is an integral-field spectrograph equipped by 13 fiber-based IFUs called hexabundles, and 26 pluggable sky fibers (Bryant et al. 2014). Each hexabundle with a field-of-view of $15''$ diameter, is made of 61 1.6-arcsecond optical fibers. These hexabundles have physical size <1 mm, with a filling fraction of 73 per cent and together with sky fibers each fits into pre-drilled holes in a field plate. The plug plate with about 1 degree field-of-view is installed a the AAT's Prime Focus Camera top end and so hexabundle's face is placed at the focal plane of the telescope. 
+To study structure of low-mass galaxies such as dEs in Fornax cluster, high resolution spectra and high S/N were needed. With 1500V gratings in blue and 100R gratings in red, our data has resolution of ~5100 (FWHM $= 1.0 \AA$) in blue ($\sim4660-5430A^o$) and ~4300 (FWHM $= 1.6 \AA$) in red ($6250-7350A^o$). Which means ambitiously reaching around 25 km/s and 30 km/s velocity dispersion in blue and red respectively. And with fourteen ~30 minutes exposure times for each field gaining high S/N became possible. Moreover compared to single IFU instruments we can simultaneously observe 12 galaxies and one calibration star which significantly increases the observation rate.
+
+Most of the previous surveys are long slit, which make them susceptible to aperture
+effects. While Integral Field Spectroscopy spatially resolves each galaxy and gives
+different spectra at different parts of the galaxy. Also current IFU surveys (e.g.
+SAMI Galaxy Survey, MANGA) are not useful for the study of dEs due to sensitivity, effective spatial resolution and most importantly spectral resolution limitations. A comparison between theses projects can be seen in table 1.
+
+
+\begin{table}
+\tiny
+\centering
+\caption{Projects on Dwarf Galaxies} % title of Table
+\begin{tabular}{cccccc} % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+Survey & No. & $\lambda$ & FWHM & Cluster & Telescope \\ [0.5ex] % inserts table
+\hline
+&& 4660-5430 (B)& 1.0\\[-1ex]
+\raisebox{1.5ex}{SAMI\_Fornax} &\raisebox{1.5ex}{60}& 6250-7350 (R) &1.6 &  \raisebox{1.5ex}{Fornax} & \raisebox{1.5ex}{SAMI@AAO} \\ [1ex]
+\hline
+SAURON &12& 4760-5300 & 3.9 & Virgo & WHT@ING \\
+\hline % inserts single horizontal line
+ &10& 4600-5600 & 1.6 & Virgo & INT@ING\\ % inserting body of the table
+&&4200-5000 (B) &1.4 \\[-1ex]
+\raisebox{1.5ex}{SMACKED}&\raisebox{1.5ex}{26} &5500-6700 (R)& 3.2 & \raisebox{1.5ex}{Virgo} & \raisebox{1.5ex}{WHT@ING} \\
+ &3& 4500-5600 & 2.7 & Virgo &  VLT@ESO\\
+\hline
+&& 3500-7100 (B)& 1.6 & &WHT\&INT@ING\\[-1ex]
+\raisebox{1.5ex}{MAGPOP} &\raisebox{1.5ex}{4}& 8000-9100 (R) &3.2 &  \raisebox{1.5ex}{Virgo} & TNG@INAF \\ [1ex] % [1ex] adds vertical space
+
+\hline
+\end{tabular}
+\label{CompDwrf} % is used to refer this table in the text
+\end{table}
+
+Our sample was selected based on Fornax Deep Survey (FDS). Considering the aim was to study star formation and evolution of dEs within Fornax cluster, the primary survey targets are FDS galaxies that cover $ -18<M_r<-14.5$ and $17<\mu_r<23$, also in different environments from center of the cluster to outside of its virial radius ($4^{\circ}$ or 1.4 Mpc) such as dEs in Fornax A. In total around 100 galaxies were observed, but we had to eliminate about half of them since they were too faint and had noisy spectra that couldn't be fitted by pPXF even when their light was integrated. This resulted in a complete sample of 48 early-type galaxies, mostly dwarf elliptical galaxies which are listed in table ?? \textbf{[table of galaxies to be added]}. In the following section we describe the methods used for extraction of kinematics of these objects.
+
+\section{Methods}
+
+To extract stellar kinematics or stellar population (3rd paper) from absorption-line spectra of galaxies we used the Penalized Pixel-Fitting method (pPXF). 
+We extracted stellar kinematics  and stellar population (3rd paper) from absorption-line spectra of our galaxies by using the penalised Pixel Fitting (pPXF) routine of Cappellari \& Emsellen (2004). pPXF basically is a maximum penalized likelihood approach in pixel space, with the aim of finding an optimal temple with the minimum template-galaxy mismatch errors. It finds the best-fitting linear combination of input stellar templates by convolving them with the line-of-sight velocity distribution of the input galaxy's spectra, and then the best-fitting parameters are determined by non-linear chi-squared minimization in pixel space (logarithmically binned in wavelength). The best match for SAMI-Fornax's wavelength range and spectral resolution is single-age single-metallicity population models of PÉGASE-HR (Le Borgne et al. 2004). PÉGASE-HR is the result of applying the PÉGASE.2 code on ÉLODIE.  ÉLODIE is a high resolution stellar library of 1959 spectra for 1503 stars with R=10 000 at lambda=550 nm.
+%N. Kacharov et al. 2018 --> The SSP models are computed using the Padova isochrones (Bertelli et al.1994), assuming a Kroupa initial mass function (IMF; Kroupa 2001), and normalized to present day mass of 1 Solar mass. They include mass loss from supernovae ejecta (Woosley  &  Weaver 1995)  and  stellar  winds.  They  have  a  resolution R=10^4 and  cover  a  wavelength  range  between  3900 and 6800 Å. The grid covers seven metallicity bins with a range −2.3<[Fe/H]<+0.7, assuming a scaled Solar abundance pattern, and 68 irregularly spaced age bins between 1 Myr and 20 Gyr
+\\ During spectra fitting with pPXF we also include an additive Legendre polynomial of 6th degree and a multiplicative Legendre polynomial of 10 order to correct the template continuum shape during the fit. They're in account for ??. For all of the galaxies we measure the Gauss-Hermite moments of the LOSVD up to $h_4$, even though at our minimum S/N~?? the data is unable to constrain all of the V, $\sigma$, $h_3$, and $h_4$ parameters.In pPXF one can also fit the gas emission lines together with the stellar kinematics and population. But for the current work since not all of the galaxies have emission lines, we avoid regions with emission lines by simply masking them to gain the best fitting spectra. Another interesting feature in this method is regularization which is used to reduce the noise in the recovery of the stellar population parameters and more importantly it attaches a physical meaning to the output weights assigned to the best-fitting template in term of the star formation history (SFH) or metallicity distribution of each galaxy. This feature was important in stellar population of our galaxies (SAMI-Fornax paper 3).
+
+In case of galaxies with emission lines we avoid regions with emission lines by simply masking them, which is also possible by gas feature within the latest version of pPXF. Galaxies with prominent emission lines are ??. Moreover, We computed the uncertainties by (100 realizations) Monte Carlo simulations. In each loop the best-fitted spectra is disturbed by random spectra convolved by the sigma of the difference between original and best-fitted template spectra.  
+
+For kinematic maps to have accurate measured velocity and velocity dispersion we require high S/N. This can be achieved by Voronoi binning algorithm (Cappellari \& Copin 2003), which starts from the central pixels with highest S/N and accretes closes neighboring pixels to reach the target S/N. We chose $(S/N)_{min}=15$ for velocity dispersion maps and $(S/N)_{min}=10$ for Velocity maps, which is a comprise between assurance of the reliability of extracted kinematics and spatial resolution of images.
+
+In order to check the accuracy of our results, we compared them with Toloba et al. 2011 study on dwarf galaxies which can be seen in plot ??. Our measurement show ...
+
+\section{Scaling Relations}
+To understand the origin of dwarf galaxies, the role of environment in evolution of these low-mass stellar systems and also their dark matter content, we analyze their fundamental kinematic scaling relations. Manifolds of galaxy properties such as the Faber-Jackson, the fundamental Plane (FP), the color-velocity dispersion relation, and etc. 
+
+\subsection{Fundamental Plane}
+\begin{figure*}[!htb]
+   \centering
+   \includegraphics[width=32cm,height=8cm,keepaspectratio]{../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf}
+  \includegraphics[width=32cm,height=8cm,keepaspectratio]{../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.pdf}
+         \caption{Fundamental plane in two different Projections \textbf{[two elongated ones must be shown with different symbols]}}
+         \label{fig:FP}
+\end{figure*}
+The empirical Fundamental plane which is a bivariate relation (Brosche 1973, Dressler et al. 1973 and Djorgovski \& Davis 1987) between $R_e$ (the half light ration radius of the galaxy), $I_e$ (the mean surface brightness within Re in flux units), and $\sigma$ (the galaxy internal velocity dispersion), is an indication of galaxies being in virial equilibrium $R_e \propto \sigma^2 I_e^{-1} (M/L)^{-1}$ (Binney \& Tremaine 2008). By assuming the mass-to-light ratio M/L to be a power-law function of $\sigma$ and $I_e$, the physical quantities can be replaced by observables and the edge-on view of FP will be simplified to
+\begin{eqnarray}
+	log(R_e) = \alpha log(\sigma) + \beta <\mu_e> + \gamma
+\end{eqnarray}
+where $<\mu_e>$ is the mean surface brightness in $mag/arcsec^{2}$ defined as $-2.5log(I_e)+cte$. 
+The derived coefficients of FP (Bernardi et al 2003) are not exactly the same as the predicted ones from the virial theorem . This deviation of coefficients (tilt) also tightness of the plane have always been some of the keys for better understanding evolution of galaxies, their structure and stellar population, or even dark matter content of galaxies (Renzini \& Ciotti 1993, ,  Borriello et al. 2003). \textbf{[some examples of $\alpha$ and $\beta$ from literature]}
+%The observed coefficients of FP are different from the predicted ones of the virial theorem. This 'tilt' of the FP might be due to different formation histories and evolutionary processes, or it can be explained by the evolution of M/L as a function of stellar population (age, metalicity, and initial mass function), also possible dark matter content.
+\\In this projection of FP (eq. 1) which is commonly used all distance-dependent quantities, velocity dispersion and surface brightness, are collected in one side. But we will also study the other projection $log(\sigma) = \alpha' log(R_e) + \beta' <\mu_e> + \gamma'$, which here dependent variables $R_e$ and $\mu_e$ are in one side. For calculation of error bars in this projection we also need covariance matrix between $R_e$ and $\mu_e$.
+
+The common way to find this best fitted plane in the three dimensional space of ($logR_e$, $\mu_e$, $log\sigma$) is least absolute deviation orthogonal fit (e.g. J\o rgensen et al. 1996, Falc$\acute{o}$n-Barroso et la. 2011, and Cappellari et al. 2013). The advantage of least absolute deviation to the famous least-square deviation is that by treating all parameters symmetrically it's relatively insensitive to few outliers. In this method the residuals perpendicular to the plane are 
+\begin{eqnarray}
+	D = \frac{| log(R_e)-\alpha log(\sigma)-\beta <\mu_e>-\gamma |}{\sqrt{\alpha^2+\beta^2+1}}
+\end{eqnarray}
+Also the uncertainties of coefficients are derived by bootstrap procedure \textbf{[must be done]}. Even though the FP in Fig.\ref{fig:FP} is derived from least-absolute deviation method, the FP we got from least-square deviation is quite similar since we didn't have any significant outliers in SAMI-Fornax data sample.
+\\In integrated galaxy specra, lines broadening  can be caused by both velcoity dispersion and the galaxy's rotational velocity. The effect of $V_{rot}$ will more prominent in elongated rotational galaxies such as FCC177 and FCC153. Without considering their rotational velocity they will deviate from FP, so we didn't include them in FP fitting.
+\\
+\textbf{[when bring up the comparisons with literature such as Toloba et al. 2011?]}\\
+
+... But since our galaxy is concentrated on elliptical galaxies and so dispersion supported $\sigma$ is the measure of the mass of each galaxy...
+
+... Replacing velocity dispersions of our giant galaxies with Fornax3D results did not show prominent difference in FP. So we will stick with SAMI-fornax results for both giant and dwarf galaxies, as standard properties calculated from different methods are tended to have different systematic errors. ... 
+
+\subsection{Fundamental Plane in the $\kappa$-space}
+For more transparent analysis of FP, Bender et al. (1992) defined a new coordinate system by a simple orthogonal coordinate transformation of the 3 dimensional space of ($logR_e$, $logI_e$, $log\sigma^2$) as following
+\begin{align}
+\kappa_1 &\equiv(log{\sigma_0}^2+log r_e)/\sqrt{2} \\
+\kappa_2 &\equiv(log{\sigma_0}^2+2logI_e-log r_e)/\sqrt{6} \\
+\kappa_3 &\equiv(log{\sigma_0}^2-log I_e-log r_e)/\sqrt{3}
+\end{align}
+By defining luminosity and mass as $L=c_1I_e{r_e}^2$ and $M=c_2{\sigma_0}^2r_2$, each of the coordinates will have a specific physical meaning. $\kappa_1$ being representative of galaxies size or logarithm of mass, $\kappa_2$ being representative of the logarithm of $M/L$ and $\kappa_3$ being representative of the logarithm of $(M/L){I_e}^3$. Also in $\kappa$ coordinate system $\kappa_1-\kappa_2$ and $\kappa_1-\kappa_3$ projections correspond to face-on and edge-on viwe of FP respectively.\\
+In Fig.\ref{fig:FPkappa} we see distribution of SAMI-Fornax galaxies in kappa space, together with Toloba et al. (2011) sets of dwarf galaxies within Virgo galaxies. Their observations were done in V and K band , so we needed to transform them to r band first by using transformations between magnitude systems. \textbf{[what we see?]}
+\begin{figure}[!htb]
+   \centering
+   \includegraphics[width=10cm,height=8cm,keepaspectratio]{../2_pipeline/3_FP_kappa+Toloba/FP_kappa+Toloba.pdf}
+         \caption{FP in $\kappa$ space}
+         \label{fig:FPkappa}
+\end{figure}
+
+
+\subsection{Faber Jackson}
+\begin{figure*}[!htb]
+   \centering
+   \includegraphics[width=37cm,height=8cm,keepaspectratio]{../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf}
+         \caption{Faber Jackson Relation}
+         \label{fig:FJ}
+\end{figure*}
+One of the first discoveries in early-type galaxies was that their stellar velocity dispersion correlates with their luminosity (Faber \& Jackson 1967). This 2 dimensional realtion $L\propto\sigma^\alpha$, Faber-Jackson relation is in fact a projection
+%a narrow plane called%
+ of Fundamental Plane. It has been shown that the slope of this relations gets shallower as it goes to fainter objects (Davies et al. 1983). In Fig.\ref{fig:FJ} we go down to faint low-mass galaxies of $M\sim 10^{7.4}M_\odot$ color coded by surface brightness within effective radius. \textbf{[what we see?]}\\
+
+%As central velocity dispersion is an indicator of total mass in dispersion supported galaxies, a complimentary comparison would be between stellar mass and velocity dispersion of these objects Fg.\ref{fig:M-S}. 
+%\begin{figure*}[!htb]
+%   \centering
+%   \includegraphics[width=20cm,height=8cm,keepaspectratio]{../2_pipeline/3_Mstellar_disp+Toloba/Mstellar_Disp+Toloba.pdf}
+%         \caption{Sellar Mass vs. Velocity dispersion}
+%         \label{fig:M-S}
+%\end{figure*}
+
+\subsection{Color vs. $\sigma$}
+To have a look at stellar population and ?? of these objects, one can have a look at color versus velocity dispersion relation of them Fig.\ref{fig:CI-S}\\
+\textbf{[Discussion]} 
+\begin{figure}[!htb]
+   \centering
+   \includegraphics[width=10cm,height=20cm,keepaspectratio]{../2_pipeline/3_color_Disp/Color_Disp.pdf}
+         \caption{Color vs. Dispersion}
+         \label{fig:CI-S}
+\end{figure}
+
+\subsection{Dynamical Mass}
+Not considering the difference between radial and tangential velocity dispersion weakens our ability to reach accurate conclusions about structure and formations of galaxies. This becomes more important in calculating dynamical mass of a galaxy by only having its 2d observed radial properties. Wolf et al. 2010 shown that within $r_3$ radius this difference is insignificant and mass can be  where  
+\section{Phase-Space Diagrams}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%                                                One column figure
+%----------------------------------------------------------- S_vib
+\clearpage
+\begin{figure*}[!htb]
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/213Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/167Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/219Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/184Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]
+{../2_pipeline/1_V&S_Maps/29Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]
+{../2_pipeline/1_V&S_Maps/179Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]
+{../2_pipeline/1_V&S_Maps/147Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/83Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/193Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/153Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/177Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/249Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/190Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/143Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/235Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/301Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/263Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/37Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/33Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/285Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/182Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/136Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/106Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/202Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/113Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/222Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/100Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/203Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/135Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/207Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/245Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/252Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/300Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/266Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/46Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/188Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/211Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/164Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/306Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/253Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/274Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/298Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%
+\begin{figure*}[!htb]
+   \ContinuedFloat
+   \centering
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/264Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/195Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/250Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/178Velocity_map.pdf}
+   \includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/134Velocity_map.pdf}
+	\includegraphics[width=21cm,height=6cm,keepaspectratio]{../2_pipeline/1_V&S_Maps/51Velocity_map.pdf}
+         \caption{Photometric images, Velocity maps, Dispersion maps}
+         \label{FigVelDis}
+\end{figure*}
+\clearpage
+%______________________________________________________________
+
+\section{Conclusions}
+
+  
+\begin{acknowledgements}
+
+\end{acknowledgements}
+
+
+%-------------------------------------------------------------------
+
+\begin{thebibliography}{}
+
+  \bibitem[1966]{baker} Baker, N. 1966,
+      in Stellar Evolution,
+      ed.\ R. F. Stein,\& A. G. W. Cameron
+      (Plenum, New York) 333
+
+   \bibitem[1988]{balluch} Balluch, M. 1988,
+      A\&A, 200, 58
+
+   \bibitem[1980]{cox} Cox, J. P. 1980,
+      Theory of Stellar Pulsation
+      (Princeton University Press, Princeton) 165
+
+   \bibitem[1969]{cox69} Cox, A. N.,\& Stewart, J. N. 1969,
+      Academia Nauk, Scientific Information 15, 1
+
+   \bibitem[1980]{mizuno} Mizuno H. 1980,
+      Prog. Theor. Phys., 64, 544
+   
+   \bibitem[1987]{tscharnuter} Tscharnuter W. M. 1987,
+      A\&A, 188, 55
+  
+   \bibitem[1992]{terlevich} Terlevich, R. 1992, in ASP Conf. Ser. 31, 
+      Relationships between Active Galactic Nuclei and Starburst Galaxies, 
+      ed. A. V. Filippenko, 13
+
+   \bibitem[1980a]{yorke80a} Yorke, H. W. 1980a,
+      A\&A, 86, 286
+
+   \bibitem[1997]{zheng} Zheng, W., Davidsen, A. F., Tytler, D. \& Kriss, G. A.
+      1997, preprint
+\end{thebibliography}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Examples for figures using graphicx
+A guide "Using Imported Graphics in LaTeX2e"  (Keith Reckdahl)
+is available on a lot of LaTeX public servers or ctan mirrors.
+The file is : epslatex.pdf 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%_____________________________________________________________
+%                 A figure as large as the width of the column
+%-------------------------------------------------------------
+   \begin{figure}
+   \centering
+   \includegraphics[width=\hsize]{empty.eps}
+      \caption{Vibrational stability equation of state
+               $S_{\mathrm{vib}}(\lg e, \lg \rho)$.
+               $>0$ means vibrational stability.
+              }
+         \label{FigVibStab}
+   \end{figure}
+%
+%_____________________________________________________________
+%                                    One column rotated figure
+%-------------------------------------------------------------
+   \begin{figure}
+   \centering
+   \includegraphics[angle=-90,width=3cm]{213Velocity_map.pdf}
+      \caption{Vibrational stability equation of state
+               $S_{\mathrm{vib}}(\lg e, \lg \rho)$.
+               $>0$ means vibrational stability.
+              }
+         \label{FigVibStab}
+   \end{figure}
+%
+%_____________________________________________________________
+%                        Figure with caption on the right side 
+%-------------------------------------------------------------
+   \begin{figure}
+   \sidecaption
+   \includegraphics[width=3cm]{empty.eps}
+      \caption{Vibrational stability equation of state
+               $S_{\mathrm{vib}}(\lg e, \lg \rho)$.
+               $>0$ means vibrational stability.
+              }
+         \label{FigVibStab}
+   \end{figure}
+%
+%_____________________________________________________________
+%
+%_____________________________________________________________
+%                                Figure with a new BoundingBox 
+%-------------------------------------------------------------
+   \begin{figure}
+   \centering
+   \includegraphics[bb=10 20 100 300,width=3cm,clip]{empty.eps}
+      \caption{Vibrational stability equation of state
+               $S_{\mathrm{vib}}(\lg e, \lg \rho)$.
+               $>0$ means vibrational stability.
+              }
+         \label{FigVibStab}
+   \end{figure}
+%
+%_____________________________________________________________
+%
+%_____________________________________________________________
+%                                      The "resizebox" command 
+%-------------------------------------------------------------
+   \begin{figure}
+   \resizebox{\hsize}{!}
+            {\includegraphics[bb=10 20 100 300,clip]{empty.eps}
+      \caption{Vibrational stability equation of state
+               $S_{\mathrm{vib}}(\lg e, \lg \rho)$.
+               $>0$ means vibrational stability.
+              }}
+         \label{FigVibStab}
+   \end{figure}
+%
+%______________________________________________________________
+%
+%_____________________________________________________________
+%                                             Two column Figure 
+%-------------------------------------------------------------
+   \begin{figure*}
+   \resizebox{\hsize}{!}
+           % {\includegraphics[bb=10 20 100 300,clip]{213Velocity_map.pdf}
+      \caption{Vibrational stability equation of state
+               $S_{\mathrm{vib}}(\lg e, \lg \rho)$.
+               $>0$ means vibrational stability.
+              }}
+         \label{FigVibStab}
+   \end{figure*}
+%
+%______________________________________________________________
+%
+%_____________________________________________________________
+%                                             Simple A&A Table
+%_____________________________________________________________
+%
+\begin{table}
+\caption{Nonlinear Model Results}             % title of Table
+\label{table:1}      % is used to refer this table in the text
+\centering                          % used for centering table
+\begin{tabular}{c c c c}        % centered columns (4 columns)
+\hline\hline                 % inserts double horizontal lines
+HJD & $E$ & Method\#2 & Method\#3 \\    % table heading 
+\hline                        % inserts single horizontal line
+   1 & 50 & $-837$ & 970 \\      % inserting body of the table
+   2 & 47 & 877    & 230 \\
+   3 & 31 & 25     & 415 \\
+   4 & 35 & 144    & 2356 \\
+   5 & 45 & 300    & 556 \\ 
+\hline                                   %inserts single line
+\end{tabular}
+\end{table}
+%
+%_____________________________________________________________
+%                                             Two column Table 
+%_____________________________________________________________
+%
+\begin{table*}
+\caption{Nonlinear Model Results}             
+\label{table:1}      
+\centering          
+\begin{tabular}{c c c c l l l }     % 7 columns 
+\hline\hline       
+                      % To combine 4 columns into a single one 
+HJD & $E$ & Method\#2 & \multicolumn{4}{c}{Method\#3}\\ 
+\hline                    
+   1 & 50 & $-837$ & 970 & 65 & 67 & 78\\  
+   2 & 47 & 877    & 230 & 567& 55 & 78\\
+   3 & 31 & 25     & 415 & 567& 55 & 78\\
+   4 & 35 & 144    & 2356& 567& 55 & 78 \\
+   5 & 45 & 300    & 556 & 567& 55 & 78\\
+\hline                  
+\end{tabular}
+\end{table*}
+%
+%-------------------------------------------------------------
+%                                          Table with notes 
+%-------------------------------------------------------------
+%
+% A single note
+\begin{table}
+\caption{\label{t7}Spectral types and photometry for stars in the
+  region.}
+\centering
+\begin{tabular}{lccc}
+\hline\hline
+Star&Spectral type&RA(J2000)&Dec(J2000)\\
+\hline
+69           &B1\,V     &09 15 54.046 & $-$50 00 26.67\\
+49           &B0.7\,V   &*09 15 54.570& $-$50 00 03.90\\
+LS~1267~(86) &O8\,V     &09 15 52.787&11.07\\
+24.6         &7.58      &1.37 &0.20\\
+\hline
+LS~1262      &B0\,V     &09 15 05.17&11.17\\
+MO 2-119     &B0.5\,V   &09 15 33.7 &11.74\\
+LS~1269      &O8.5\,V   &09 15 56.60&10.85\\
+\hline
+\end{tabular}
+\tablefoot{The top panel shows likely members of Pismis~11. The second
+panel contains likely members of Alicante~5. The bottom panel
+displays stars outside the clusters.}
+\end{table}
+%
+% More notes
+%
+\begin{table}
+\caption{\label{t7}Spectral types and photometry for stars in the
+  region.}
+\centering
+\begin{tabular}{lccc}
+\hline\hline
+Star&Spectral type&RA(J2000)&Dec(J2000)\\
+\hline
+69           &B1\,V     &09 15 54.046 & $-$50 00 26.67\\
+49           &B0.7\,V   &*09 15 54.570& $-$50 00 03.90\\
+LS~1267~(86) &O8\,V     &09 15 52.787&11.07\tablefootmark{a}\\
+24.6         &7.58\tablefootmark{1}&1.37\tablefootmark{a}   &0.20\tablefootmark{a}\\
+\hline
+LS~1262      &B0\,V     &09 15 05.17&11.17\tablefootmark{b}\\
+MO 2-119     &B0.5\,V   &09 15 33.7 &11.74\tablefootmark{c}\\
+LS~1269      &O8.5\,V   &09 15 56.60&10.85\tablefootmark{d}\\
+\hline
+\end{tabular}
+\tablefoot{The top panel shows likely members of Pismis~11. The second
+panel contains likely members of Alicante~5. The bottom panel
+displays stars outside the clusters.\\
+\tablefoottext{a}{Photometry for MF13, LS~1267 and HD~80077 from
+Dupont et al.}
+\tablefoottext{b}{Photometry for LS~1262, LS~1269 from
+Durand et al.}
+\tablefoottext{c}{Photometry for MO2-119 from
+Mathieu et al.}
+}
+\end{table}
+%
+%-------------------------------------------------------------
+%                                       Table with references 
+%-------------------------------------------------------------
+%
+\begin{table*}[h]
+ \caption[]{\label{nearbylistaa2}List of nearby SNe used in this work.}
+\begin{tabular}{lccc}
+ \hline \hline
+  SN name &
+  Epoch &
+ Bands &
+  References \\
+ &
+  (with respect to $B$ maximum) &
+ &
+ \\ \hline
+1981B   & 0 & {\it UBV} & 1\\
+1986G   &  $-$3, $-$1, 0, 1, 2 & {\it BV}  & 2\\
+1989B   & $-$5, $-$1, 0, 3, 5 & {\it UBVRI}  & 3, 4\\
+1990N   & 2, 7 & {\it UBVRI}  & 5\\
+1991M   & 3 & {\it VRI}  & 6\\
+\hline
+\noalign{\smallskip}
+\multicolumn{4}{c}{ SNe 91bg-like} \\
+\noalign{\smallskip}
+\hline
+1991bg   & 1, 2 & {\it BVRI}  & 7\\
+1999by   & $-$5, $-$4, $-$3, 3, 4, 5 & {\it UBVRI}  & 8\\
+\hline
+\noalign{\smallskip}
+\multicolumn{4}{c}{ SNe 91T-like} \\
+\noalign{\smallskip}
+\hline
+1991T   & $-$3, 0 & {\it UBVRI}  &  9, 10\\
+2000cx  & $-$3, $-$2, 0, 1, 5 & {\it UBVRI}  & 11\\ %
+\hline
+\end{tabular}
+\tablebib{(1)~\citet{branch83};
+(2) \citet{phillips87}; (3) \citet{barbon90}; (4) \citet{wells94};
+(5) \citet{mazzali93}; (6) \citet{gomez98}; (7) \citet{kirshner93};
+(8) \citet{patat96}; (9) \citet{salvo01}; (10) \citet{branch03};
+(11) \citet{jha99}.
+}
+\end{table*}
+%_____________________________________________________________
+%                      A rotated Two column Table in landscape  
+%-------------------------------------------------------------
+\begin{sidewaystable*}
+\caption{Summary for ISOCAM sources with mid-IR excess 
+(YSO candidates).}\label{YSOtable}
+\centering
+\begin{tabular}{crrlcl} 
+\hline\hline             
+ISO-L1551 & $F_{6.7}$~[mJy] & $\alpha_{6.7-14.3}$ 
+& YSO type$^{d}$ & Status & Comments\\
+\hline
+  \multicolumn{6}{c}{\it New YSO candidates}\\ % To combine 6 columns into a single one
+\hline
+  1 & 1.56 $\pm$ 0.47 & --    & Class II$^{c}$ & New & Mid\\
+  2 & 0.79:           & 0.97: & Class II ?     & New & \\
+  3 & 4.95 $\pm$ 0.68 & 3.18  & Class II / III & New & \\
+  5 & 1.44 $\pm$ 0.33 & 1.88  & Class II       & New & \\
+\hline
+  \multicolumn{6}{c}{\it Previously known YSOs} \\
+\hline
+  61 & 0.89 $\pm$ 0.58 & 1.77 & Class I & \object{HH 30} & Circumstellar disk\\
+  96 & 38.34 $\pm$ 0.71 & 37.5& Class II& MHO 5          & Spectral type\\
+\hline
+\end{tabular}
+\end{sidewaystable*}
+%_____________________________________________________________
+%                      A rotated One column Table in landscape  
+%-------------------------------------------------------------
+\begin{sidewaystable}
+\caption{Summary for ISOCAM sources with mid-IR excess 
+(YSO candidates).}\label{YSOtable}
+\centering
+\begin{tabular}{crrlcl} 
+\hline\hline             
+ISO-L1551 & $F_{6.7}$~[mJy] & $\alpha_{6.7-14.3}$ 
+& YSO type$^{d}$ & Status & Comments\\
+\hline
+  \multicolumn{6}{c}{\it New YSO candidates}\\ % To combine 6 columns into a single one
+\hline
+  1 & 1.56 $\pm$ 0.47 & --    & Class II$^{c}$ & New & Mid\\
+  2 & 0.79:           & 0.97: & Class II ?     & New & \\
+  3 & 4.95 $\pm$ 0.68 & 3.18  & Class II / III & New & \\
+  5 & 1.44 $\pm$ 0.33 & 1.88  & Class II       & New & \\
+\hline
+  \multicolumn{6}{c}{\it Previously known YSOs} \\
+\hline
+  61 & 0.89 $\pm$ 0.58 & 1.77 & Class I & \object{HH 30} & Circumstellar disk\\
+  96 & 38.34 $\pm$ 0.71 & 37.5& Class II& MHO 5          & Spectral type\\
+\hline
+\end{tabular}
+\end{sidewaystable}
+%
+%_____________________________________________________________
+%                              Table longer than a single page  
+%-------------------------------------------------------------
+% All long tables will be placed automatically at the end, after 
+%                                        \end{thebibliography}
+%
+\begin{longtab}
+\begin{longtable}{lllrrr}
+\caption{\label{kstars} Sample stars with absolute magnitude}\\
+\hline\hline
+Catalogue& $M_{V}$ & Spectral & Distance & Mode & Count Rate \\
+\hline
+\endfirsthead
+\caption{continued.}\\
+\hline\hline
+Catalogue& $M_{V}$ & Spectral & Distance & Mode & Count Rate \\
+\hline
+\endhead
+\hline
+\endfoot
+%%
+Gl 33    & 6.37 & K2 V & 7.46 & S & 0.043170\\
+Gl 66AB  & 6.26 & K2 V & 8.15 & S & 0.260478\\
+Gl 68    & 5.87 & K1 V & 7.47 & P & 0.026610\\
+         &      &      &      & H & 0.008686\\
+Gl 86 
+\footnote{Source not included in the HRI catalog. See Sect.~5.4.2 for details.}
+         & 5.92 & K0 V & 10.91& S & 0.058230\\
+\end{longtable}
+\end{longtab}
+%
+%_____________________________________________________________
+%                              Table longer than a single page
+%                                             and in landscape 
+%  In the preamble, use:       \usepackage{lscape}
+%-------------------------------------------------------------
+% All long tables will be placed automatically at the end, after
+%                                        \end{thebibliography}
+%
+\begin{longtab}
+\begin{landscape}
+\begin{longtable}{lllrrr}
+\caption{\label{kstars} Sample stars with absolute magnitude}\\
+\hline\hline
+Catalogue& $M_{V}$ & Spectral & Distance & Mode & Count Rate \\
+\hline
+\endfirsthead
+\caption{continued.}\\
+\hline\hline
+Catalogue& $M_{V}$ & Spectral & Distance & Mode & Count Rate \\
+\hline
+\endhead
+\hline
+\endfoot
+%%
+Gl 33    & 6.37 & K2 V & 7.46 & S & 0.043170\\
+Gl 66AB  & 6.26 & K2 V & 8.15 & S & 0.260478\\
+Gl 68    & 5.87 & K1 V & 7.47 & P & 0.026610\\
+         &      &      &      & H & 0.008686\\
+Gl 86
+\footnote{Source not included in the HRI catalog. See Sect.~5.4.2 for details.}
+         & 5.92 & K0 V & 10.91& S & 0.058230\\
+\end{longtable}
+\end{landscape}
+\end{longtab}
+%
+% Online Material
+%_____________________________________________________________
+%        Online appendices have to be placed at the end, after
+%                                        \end{thebibliography}
+%-------------------------------------------------------------
+%\end{thebibliography}
+
+\Online
+
+\begin{appendix} %First online appendix
+\section{Background galaxy number counts and shear noise-levels}
+Because the optical images used in this analysis...
+
+\begin{figure*}
+\centering
+\includegraphics[width=16.4cm,clip]{1787f24.ps}
+\caption{Plotted above...}
+\label{appfig}
+\end{figure*}
+
+Because the optical images...
+\end{appendix}
+
+\begin{appendix} %Second online appendix
+These studies, however, have faced...
+\end{appendix}
+
+%\end{document}
+%
+%_____________________________________________________________
+%        Some tables or figures are in the printed version and
+%                      some are only in the electronic version
+%-------------------------------------------------------------
+%
+% Leave all the tables or figures in the text, at their right place 
+% and use the commands \onlfig{} and \onltab{}. These elements
+% will be automatically placed at the end, in the section
+% Online material.
+
+\documentclass{aa}
+...
+\begin{document}
+text of the paper...
+\begin{figure*}%f1
+\includegraphics[width=10.9cm]{1787f01.eps}
+\caption{Shown in greyscale is a...}
+\label{cl12301}
+\end{figure*}
+...
+from the intrinsic ellipticity distribution.
+% Figure 2 available electronically only
+\onlfig{
+\begin{figure*}%f2
+\includegraphics[width=11.6cm]{1787f02.eps}
+\caption {Shown in greyscale...}
+\label{cl1018}
+\end{figure*}
+}
+
+% Figure 3 available electronically only
+\onlfig{
+\begin{figure*}%f3
+\includegraphics[width=11.2cm]{1787f03.eps}
+\caption{Shown in panels...}
+\label{cl1059}
+\end{figure*}
+}
+
+\begin{figure*}%f4
+\includegraphics[width=10.9cm]{1787f04.eps}
+\caption{Shown in greyscale is...}
+\label{cl1232}
+\end{figure*}
+
+\begin{table}%t1
+\caption{Complexes characterisation.}\label{starbursts}
+\centering
+\begin{tabular}{lccc}
+\hline \hline
+Complex & $F_{60}$ & 8.6 &  No. of  \\
+...
+\hline
+\end{tabular}
+\end{table}
+The second method produces...
+
+% Figure 5 available electronically only
+\onlfig{
+\begin{figure*}%f5
+\includegraphics[width=11.2cm]{1787f05.eps}
+\caption{Shown in panels...}
+\label{cl1238}
+\end{figure*}
+}
+
+As can be seen, in general the deeper...
+% Table 2 available electronically only
+\onltab{
+\begin{table*}%t2
+\caption{List of the LMC stellar complexes...}\label{Properties}
+\centering
+\begin{tabular}{lccccccccc}
+\hline  \hline
+Stellar & RA & Dec & ...
+...
+\hline
+\end{tabular}
+\end{table*}
+}
+
+% Table 3 available electronically only
+\onltab{
+\begin{table*}%t3
+\caption{List of the derived...}\label{IrasFluxes}
+\centering
+\begin{tabular}{lcccccccccc}
+\hline \hline
+Stellar & $f12$ & $L12$ &...
+...
+\hline
+\end{tabular}
+\end{table*}
+}
+\end{document}
+%
+%-------------------------------------------------------------
+%     For the online material, table longer than a single page
+%                 In the preamble for landscape case, use : 
+%                                          \usepackage{lscape}
+%-------------------------------------------------------------
+\documentclass{aa}
+\usepackage[varg]{txfonts}
+\usepackage{graphicx}
+\usepackage{lscape}
+
+\begin{document}
+text of the paper
+% Table will be print automatically at the end, in the section Online material.
+\onllongtab{
+\begin{longtable}{lrcrrrrrrrrl}
+\caption{Line data and abundances ...}\\
+\hline
+\hline
+Def & mol & Ion & $\lambda$ & $\chi$ & $\log gf$ & N & e &  rad & $\delta$ & $\delta$ 
+red & References \\
+\hline
+\endfirsthead
+\caption{Continued.} \\
+\hline
+Def & mol & Ion & $\lambda$ & $\chi$ & $\log gf$ & B & C &  rad & $\delta$ & $\delta$ 
+red & References \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+A & CH & 1 &3638 & 0.002 & $-$2.551 &  &  &  & $-$150 & 150 &  Jorgensen et al. (1996) \\                    
+\end{longtable}
+}% End onllongtab
+
+% Or for landscape, large table:
+
+\onllongtab{
+\begin{landscape}
+\begin{longtable}{lrcrrrrrrrrl}
+...
+\end{longtable}
+\end{landscape}
+}% End onllongtab
+\end{document}
