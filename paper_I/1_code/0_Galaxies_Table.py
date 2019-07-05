@@ -33,6 +33,7 @@ log_mass = np.zeros(size)
 ERR_m_r = np.zeros(size)
 ERR_mu_r = np.zeros(size)
 ERR_R_eff = np.zeros(size)
+ERR_log_mass = np.zeros(size)
 sersic_index = np.zeros(size)
 
 #stellar_mass = np.zeros(size)
@@ -62,7 +63,11 @@ for l in range(size):
 			g[l] = tbdata_FDS.field('g')[j]
 			r[l] = tbdata_FDS.field('r')[j]
 			i[l] = tbdata_FDS.field('i')[j]
+			ERR_g = tbdata_FDS.field('g_e')[j]
+			ERR_r = tbdata_FDS.field('r_e')[j]
+			ERR_i = tbdata_FDS.field('i_e')[j]
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
+			ERR_log_mass[l] = np.sqrt(0.49*(ERR_g**2+ERR_i**2) + 0.16*ERR_m_r[l]**2 + 0.16*(ERR_r**2+ERR_i**2))/(log_mass[l]*np.log(10))
 			sersic_index[l] = tbdata_FDS.field('n')[j]
 
 xFit = [g[k]-r[k] for k in range(size) if u[k]-g[k] > 0.0]
@@ -78,7 +83,7 @@ for l in range(size):
 	if name_FCC=='FCC37' or name_FCC=='FCC46' or name_FCC=='FCC33' or name_FCC=='FCC29':
 			u[l] = g[l] + b + (g[l]-r[l])*m
 			plt.plot(g[l]-r[l], u[l]-g[l], 'x')
-plt.show()
+#plt.show()
 
 #writing a csv output
 ListDict = []
@@ -88,7 +93,7 @@ for l in range(size):
 			 'M_r(mag)':"%.2f" % M_r[l], 'ERR_m_r(mag)':"%.2f" % ERR_m_r[l] ,
 			'mu_r(mag/arcsec2)':"%.2f" % mu_r[l], 'ERR_mu_r(mag/arcsec2)':"%.2f" % ERR_mu_r[l] , 
 			'R_e(arcsec)':"%.2f" % R_eff[l], 'ERR_R_e(arcsec)':"%.2f" % ERR_R_eff[l] , 
-			'axis_ratio':"%.2f" % axis_ratio[l], 'Sersic_index':"%.2f" % sersic_index[l],'log10(M_*/M_sun)':"%.4f" % log_mass[l],
+			'axis_ratio':"%.2f" % axis_ratio[l], 'Sersic_index':"%.2f" % sersic_index[l],'log10(M_*/M_sun)':"%.4f" % log_mass[l], 'ERR_log10(M_*)':"%.4f" % ERR_log_mass[l],
 			'u':"%.4f" % u[l], 'g':"%.4f" % g[l], 'r':"%.4f" % r[l], 'i':"%.4f" % i[l]}
 	ListDict.append(dict.copy())
 
