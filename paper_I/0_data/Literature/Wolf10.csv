@@ -1,4 +1,4 @@
-Galaxy,Distance[kpc],Distance_ERR,Luminosity[L_sun],Luminosity_ERR,R_0[arcmin],R_0_ERR,r_lim[arcmin],r_lim_ERR,2DR_half[pc],2DR_ERR,3DR_half[pc],3DR_ERR,sigma_los[km/s],sigma_ERR,Dyn_Mass[M_sun],Dmass_ERR,M/L [M_sun/L_sun],M/L_ERR
+Galaxy,Distance[kpc],Distance_ERR,Luminosity[L_sun],Luminosity_ERR,R_0[arcmin],R_0_ERR,r_lim[arcmin],r_lim_ERR,2DR_half[pc],2DR_ERR,3DR_half[pc],3DR_ERR,sigma_los[km/s],sigma_ERR,Dyn_Mass[M_sun],Dmass_ERR,M/L[M_sun/L_sun],M/L_ERR
 Carina(723),105,2,430000,100000,8.8,1.2,28.8,3.6,254,28,334,37,6.4,0.2,9560000,925000,44,11.5
 Draco(206),76,5,220000,65000,7.63,0.04,45.1,0.6,220,11,291,14,10.1,0.5,21100000,3100000,200,70
 Fornax(2409),147,3,17000000,4500000,13.7,1.2,71.1,4,714,40,944,53,10.7,0.2,73900000,3850000,8.7,2.55
