@@ -1,4 +1,4 @@
-Galaxy,SR/FR,Kinem.,\sigma_e(km/s),H_beta(\AA),H_betao(\AA),Fe5015(\AA),Mgb(\AA),M\L_V(M/Lsun),M\L_V+ERR,M\L_V-ERR,M/L_3.6(M/Lsun),M/L_3.6+ERR,M/L_3.6-ERR
+Galaxy,SR/FR,Kinem.,\sigma_e(km/s),H_beta(\AA),H_betao(\AA),Fe5015(\AA),Mgb(\AA),M\L*_V(M/Lsun),M\L*_V+ERR,M\L*_V-ERR,M/L*_3.6(M/Lsun),M/L*_3.6+ERR,M/L*_3.6-ERR
 474,FR, MC,142,1.85,2.93,3.84,2.96,3.52,-0.59,0.67,0.78,-0.13,0.14
 524,FR, SC,225,1.52,2.58,4.26,3.63,5.36,-0.6,0.58,1.05,-0.1,0.1
 821,FR, SC,182,1.65,2.65,3.69,3.22,4.54,-0.6,0.63,1.02,-0.12,0.12
