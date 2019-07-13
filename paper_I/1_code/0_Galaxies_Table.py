@@ -7,8 +7,7 @@ import math
 from numpy.polynomial.polynomial import polyfit
 
 #The list of Good SAMI_2015&2016 galaxies - with their FCC and FDS names
-#with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
-with open( '../0_data/tmp/NotChosen_FCC_FDS.csv', 'r' ) as f:
+with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
     name = csv.reader(f)
     name_list = list(map(tuple, name))
 
@@ -55,9 +54,9 @@ for l in range(size):
 		if tbdata_FDS.field('Target')[j]==name_FDS:
 			RA[l] = tbdata_FDS.field('RA')[j]
 			DEC[l] = tbdata_FDS.field('DEC')[j]
-			M_r[l] = tbdata_FDS.field('r_mag')[j] - 31.0
+			M_r[l] = tbdata_FDS.field('r_mag')[j] - 31.51
 			ERR_m_r[l] = tbdata_FDS.field('r_mag_e')[j]
-			M_g[l] = tbdata_FDS.field('g_mag')[j] - 31.0
+			M_g[l] = tbdata_FDS.field('g_mag')[j] - 31.51
 			ERR_m_g[l] = tbdata_FDS.field('g_mag_e')[j]
 			R_eff[l] = tbdata_FDS.field('reff')[j]
 			ERR_R_eff[l] = tbdata_FDS.field('reff_e')[j]
@@ -102,10 +101,7 @@ for l in range(size):
 			'u':"%.4f" % u[l], 'g':"%.4f" % g[l], 'r':"%.4f" % r[l], 'i':"%.4f" % i[l]}
 	ListDict.append(dict.copy())
 
-#with open('../2_pipeline/0_Galaxies_Table/Galaxies_Table.csv', 'w') as output_file:
-with open('../2_pipeline/0_Galaxies_Table/tmp/NotChosen_Galaxies_Table.csv', 'w') as output_file:
+with open('../2_pipeline/0_Galaxies_Table/Galaxies_Table.csv', 'w') as output_file:
     dict_writer = csv.DictWriter(output_file, dict.keys())
     dict_writer.writeheader()
     dict_writer.writerows(ListDict)
-
-#******************************ERRORS - Seperate File*************************************
