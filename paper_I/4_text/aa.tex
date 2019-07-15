@@ -66,9 +66,10 @@
 \section{Introduction}
 
    Still after decades of studying dwarf galaxies, the formation and evolution of these objects is considered an active debate. Over the past few years, alongside improvement of observation the idea behind the lifeline of these faint and small objects had become clearer (e.g. Ry$\acute{s}$ et al. 2013, Toloba et al. 2015, Venhola et al. 2018). However, the need for more detailed and precise data to close this debate is still on the table. Thus with high resolution multiplexing deep-SAMI data cubes and statistically significant sample of dEs in Fornax cluster, we've started a new journey to collect new information from kinematics, chemical composition and structure of these faint objects. \\Why studying these faint objects is important, how we approached these questions, and what new results and clues are accomplished are the questions which are going to be investigated in this research. This is the first paper of the Spectroscopic Analysis of Fornax Dwarf Galaxies series, and is dedicated to kinematic studies of dwarf early-type galaxies within Fronax galaxy cluster. The section 1 will continue to inspect why dwarf galaxies received lots of attention in the past decades. Section 2 will be dedicated to the details of our data and its comparison to previous observations. In section 3 \& 4, we'll explain the methods that have been used and our results respectively. Finally, Section 5 will present the discussion and conclusions.   
-\subsection{Why Dwarfs?}
+\subsection{Why dwarf galaxies?}
 
-Different theories and ideas about the formation history of the big zoo of galaxies have been developed in the past decades. For galaxies inside clusters one of the main mechanisms governing their formation and evolution is environmental effects such as ram-pressure stripping (Lin \& Faber 1983), harassment (Moore et al. 1998), or starvation (Larson et al. 1980). An ideal source to investigate the role of environment are dwarf galaxies, since they have low mass and low density and thus are more vulnerable to environmental effects. \\
+Different theories and ideas about the formation history of the big zoo of galaxies have been developed in the past decades. For galaxies inside clusters one of the main mechanisms governing their formation and evolution is environmental effects such as ram-pressure stripping (Lin \& Faber 1983), harassment (Moore et al. 1998), or starvation (Larson et al. 1980). An ideal source to investigate the role of environment are dwarf galaxies, since they have low mass and low density and thus are more vulnerable to environmental effects.
+\subsection{What we know about dwarfs?}
 Dwarf galaxies despite their plain appearance and smooth light distribution have complex characteristics (Lisker 2006), which indicate the influence of environment in their past. \\ \textit{Spatial distribution of dwarfs}: early-type dwarf galaxies (dEs) outnumber all other galaxy types in dense environment, like clusters, while late-type low-luminosity galaxies are the dominant population in the fields (e.g. Dressler 1980, Sandage et al. 1985, and Ferguson \& Bingelli 1994).\\ \textit{Inner structure vs. local density of dEs}: A substructure-density relation is seen in early-type dwarf galaxies, such that dEs with blue center or no nucleus are mostly found in low-density cluster regions, dEs with disks in intermediate-density regions, and nucleated dEs in high-density regions of the cluster (Ferguson \& Sandage 1989, van den Bergh 1986, and Lisker et al. 2007). \\ \textit{Color vs. local density of dEs}: dEs in higher density regions are redder compared to other regions (Lisker et al. 2008). \\ \textit{Kinematics vs. local density of dEs}: pressure supported dEs are mostly found in high density regions of cluster, whereas in lower density regions like outskirts the angular momentum of dEs increases and dEs are largely rotationally supported. Also fast rotators in the outer part of the cluster rotate faster than fast rotators in the inner parts of the cluster (Toloba et al. 2009, van Zee et al. 2004a, and Toloba et al. 2015).\\
 Dwarf galaxies's formation history is another key to the formation and evolution of galaxies; whether dwarf galaxies are the descendants in hierarchical structure formation (Moore et al. 1999) and were created by gravitational collapse like other galaxies (Kauffmann \& White 1993), or whether they were formed at later epoch from late-type low-luminosity star forming galaxies by environmental effects (Boselli \& Gavazzi 2006, Gavazzi et al. 2013, and Boselli \& Favazzi 2014). The answer to these questions could be achieved by pursuing the behaviour and location of these galaxies inside galaxy physical parameter space. \\ \textit{Surface brightness profile}: logarithm of the S$\acute{e}$rsic index of both dwarfs and giant early-type galaxies linearly increases with central surface brightness and magnitude, but SB profiles of dEs are less steep than massive ellipticals (Gavazzi et al. 2005, Graham \& Guzm$\acute{a}$n 2013, and Young \& Currie 1994). \\ \textit{Color magnitude relation}: there is no gap seen between dwarfs and giant ellipticals in color magnitude profile (e.g. Ferrarese et al. 2006, Janz \& Lisker 2009, and Misgeld et al. 2008\&2009). \\ \textit{Fundamental plane}: inside fundamental plane it's been seen that dEs are offset with respect to the plane of early-type galaxies (Toloba et al. 2012 and Rijcke et al. 2015). \\ \textit{Disky substructure}: disk-like structures have been seen in fast rotators and dEs in the outer regions of cluster, also they have rotation curves similar to those of late-type galagixes (Toloba et al. 2015 and Toloba et al. 2009). \\ \textit{Star formation}: As the galay's luminosity decreases the duration of star formation increases (Gavazzi et al. 2002), also $H_\beta$ absorption index increases from giants to dwarfs as luminosity and velocity dispersion decreases (Poggianti et al. 2001 and Geha et al 2003).  
 
@@ -120,6 +121,72 @@ SAURON &12& 4760-5300 & 3.9 & Virgo & WHT@ING \\
 \end{table}
 
 Our sample was selected based on Fornax Deep Survey (FDS). Considering the aim was to study star formation and evolution of dEs within Fornax cluster, the primary survey targets are FDS galaxies that cover $ -18<M_r<-14.5$ and $17<\mu_r<23$, also in different environments from center of the cluster to outside of its virial radius ($4^{\circ}$ or 1.4 Mpc) such as dEs in Fornax A. In total around 100 galaxies were observed, but we had to eliminate about half of them since they were too faint and had noisy spectra that couldn't be fitted by pPXF even when their light was integrated. This resulted in a complete sample of 48 early-type galaxies, mostly dwarf elliptical galaxies which are listed in table ?? \textbf{[table of galaxies to be added]}. In the following section we describe the methods used for extraction of kinematics of these objects.
+
+
+\begin{table*}
+\begin{center}
+\caption{}
+{\renewcommand{\arraystretch}{1.}
+\resizebox{18cm}{!} {
+\begin{tabular}{|cccccccccc|}
+\hline 
+FCC name & FDS name & year & RA & DEC & $R_e$ & $M_r$ & $\mu_r$  & $\epsilon$ & n \\ 
+ &  &  & (deg) & (deg) & (arcsec) & (mag) & ($mag/arcsec^2$) &  & \\
+\hline \hline
+FCC213 & FDS11\_DWARF003 & 2016 & 54.620899 & -35.450439 & 114.88$\pm$8.41 & -23.02$\pm$0.08 & 20.7$\pm$0.23 & 0.92 & 5.8 \\
+FCC167 & FDS11\_DWARF006 & 2016 & 54.115009 & -34.976017 & 44.49$\pm$2.49 & -22.01$\pm$0.06 & 19.18$\pm$0.17 & 0.59 & 2.88 \\
+FCC219 & FDS11\_DWARF166 & 2016 & 54.7164 & -35.593323 & 26.15$\pm$1.09 & -22.00$\pm$0.05 & 18.45$\pm$0.13 & 0.87 & 3.6 \\
+FCC184 & FDS11\_DWARF001 & 2016 & 54.237602 & -35.506592 & 73.56$\pm$5.68 & -21.84$\pm$0.09 & 20.91$\pm$0.24 & 0.93 & 7.47 \\
+FCC29 & FDS25\_DWARF000 & 2018 & 50.984844 & -36.464443 & 43.82$\pm$2.72 & -21.56$\pm$0.07 & 19.92$\pm$0.19 & 0.81 & 5.43 \\
+FCC179 & FDS12\_DWARF003 & 2016 & 54.192539 & -35.999268 & 74.62$\pm$6.79 & -21.23$\pm$0.1 & 20.84$\pm$0.29 & 0.48 & 6.86 \\
+FCC147 & FDS16\_DWARF001 & 2016 & 53.819111 & -35.226257 & 29.51$\pm$1.67 & -21.08$\pm$0.06 & 19.75$\pm$0.17 & 0.98 & 5.39 \\
+FCC83 & FDS19\_DWARF000 & 2018 & 52.645653 & -34.853939 & 55.35$\pm$4.74 & -20.82$\pm$0.1 & 20.87$\pm$0.27 & 0.61 & 6.81 \\
+FCC193 & FDS11\_DWARF000 & 2016 & 54.298901 & -35.746105 & 15.53$\pm$0.74 & -20.34$\pm$0.05 & 18.67$\pm$0.15 & 0.66 & 3.09 \\
+FCC153 & FDS15\_DWARF002 & 2016 & 53.87944 & -34.447021 & 23.15$\pm$1.66 & -19.62$\pm$0.08 & 18.63$\pm$0.22 & 0.15 & 1.62 \\
+FCC177 & FDS10\_DWARF000 & 2016 & 54.197838 & -34.739735 & 28.81$\pm$2.51 & -19.34$\pm$0.1 & 20.01$\pm$0.27 & 0.26 & 1.66 \\
+FCC249 & FDS13\_DWARF000 & 2018 & 55.175434 & -37.510769 & 7.13$\pm$0.3 & -19.21$\pm$0.05 & 18.54$\pm$0.12 & 0.98 & 3.47 \\
+FCC190 & FDS11\_DWARF005 & 2016 & 54.287319 & -35.195053 & 16.23$\pm$1.07 & -19.19$\pm$0.07 & 20.28$\pm$0.2 & 0.92 & 1.81 \\
+FCC143 & FDS16\_DWARF002 & 2016 & 53.746666 & -35.171089 & 9.81$\pm$0.56 & -18.66$\pm$0.06 & 19.63$\pm$0.17 & 0.85 & 4.34 \\
+FCC235 & FDS11\_DWARF519 & 2016 & 55.041069 & -35.629093 & 42.3$\pm$5.54 & -18.57$\pm$0.14 & 22.64$\pm$0.42 & 0.68 & 0.85 \\
+FCC301 & FDS7\_DWARF000 & 2018 & 56.2649 & -35.972668 & 7.6$\pm$0.41 & -18.34$\pm$0.06 & 18.89$\pm$0.16 & 0.54 & 2.12 \\
+FCC263 & FDS5\_DWARF000 & 2018 & 55.385574 & -34.888752 & 16.47$\pm$1.38 & -18.28$\pm$0.09 & 20.51$\pm$0.26 & 0.48 & 1.37 \\
+FCC37 & FDS25\_DWARF241 & 2018 & 51.289337 & -36.365185 & 33.89$\pm$4.35 & -18.17$\pm$0.14 & 22.56$\pm$0.41 & 0.68 & 1.09 \\
+FCC33 & FDS26\_DWARF003 & 2018 & 51.243237 & -37.009613 & 16.89$\pm$1.51 & -18.07$\pm$0.1 & 20.5$\pm$0.28 & 0.37 & 1.18 \\
+FCC285 & FDS7\_DWARF360 & 2018 & 55.760147 & -36.273357 & 32.65$\pm$4.32 & -17.97$\pm$0.15 & 22.78$\pm$0.42 & 0.74 & 1.22 \\
+FCC182 & FDS11\_DWARF279 & 2016 & 54.226295 & -35.374714 & 9.67$\pm$0.66 & -17.89$\pm$0.08 & 20.5$\pm$0.21 & 0.96 & 2.43 \\
+FCC136 & FDS16\_DWARF159 & 2016 & 53.622837 & -35.546459 & 17.5$\pm$1.72 & -17.77$\pm$0.11 & 21.78$\pm$0.31 & 0.85 & 2.14 \\
+FCC106 & FDS15\_DWARF417 & 2018 & 53.198673 & -34.238728 & 10.65$\pm$0.87 & -17.42$\pm$0.09 & 20.44$\pm$0.26 & 0.49 & 2.18 \\
+FCC202 & FDS11\_DWARF235 & 2015 & 54.527325 & -35.439911 & 13.28$\pm$1.25 & -17.34$\pm$0.11 & 21.21$\pm$0.3 & 0.59 & 1.67 \\
+FCC113 & FDS15\_DWARF107 & 2018 & 53.279419 & -34.805576 & 18.92$\pm$2.35 & -17.04$\pm$0.14 & 22.45$\pm$0.39 & 0.69 & 1.19 \\
+FCC222 & FDS11\_DWARF283 & 2015 & 54.8055 & -35.37141 & 16.1$\pm$1.86 & -16.97$\pm$0.13 & 22.44$\pm$0.36 & 0.89 & 1.35 \\
+FCC100 & FDS16\_DWARF417 & 2018 & 52.948479 & -35.051388 & 19.77$\pm$2.56 & -16.96$\pm$0.14 & 22.72$\pm$0.41 & 0.76 & 1.46 \\
+FCC203 & FDS10\_DWARF189 & 2016 & 54.5382 & -34.518761 & 16.04$\pm$1.88 & -16.9$\pm$0.13 & 21.97$\pm$0.37 & 0.55 & 1.46 \\
+FCC135 & FDS15\_DWARF384 & 2016 & 53.628445 & -34.297371 & 14.72$\pm$1.68 & -16.82$\pm$0.13 & 21.7$\pm$0.36 & 0.47 & 1.58 \\
+FCC207 & FDS11\_DWARF396 & 2015 & 54.580185 & -35.129124 & 9.59$\pm$0.92 & -16.59$\pm$0.11 & 21.63$\pm$0.3 & 0.83 & 1.54 \\
+FCC245 & FDS11\_DWARF458 & 2018 & 55.140991 & -35.022888 & 14.52$\pm$1.78 & -16.5$\pm$0.14 & 22.72$\pm$0.39 & 0.92 & 1.51 \\
+FCC252 & FDS11\_DWARF069 & 2018 & 55.209988 & -35.748455 & 11.13$\pm$1.21 & -16.41$\pm$0.12 & 22.25$\pm$0.34 & 0.94 & 1.21 \\
+FCC300 & FDS7\_DWARF326 & 2018 & 56.249588 & -36.319752 & 20.82$\pm$3.23 & -16.38$\pm$0.17 & 23.37$\pm$0.49 & 0.72 & 1.14 \\
+FCC266 & FDS6\_DWARF455 & 2018 & 55.422161 & -35.170265 & 6.91$\pm$0.58 & -16.35$\pm$0.09 & 21.23$\pm$0.26 & 0.89 & 1.17 \\
+FCC46 & FDS22\_DWARF244 & 2018 & 51.604301 & -37.127785 & 8.51$\pm$0.82 & -16.31$\pm$0.11 & 21.35$\pm$0.3 & 0.64 & 0.98 \\
+FCC188 & FDS11\_DWARF155 & 2015 & 54.268906 & -35.590149 & 12.2$\pm$1.45 & -16.26$\pm$0.13 & 22.64$\pm$0.38 & 0.96 & 1 \\
+FCC211 & FDS11\_DWARF339 & 2015 & 54.589504 & -35.259689 & 6.58$\pm$0.58 & -16.11$\pm$0.1 & 21.17$\pm$0.27 & 0.75 & 1.66 \\
+FCC164 & FDS12\_DWARF367 & 2016 & 54.053589 & -36.166451 & 9.95$\pm$1.13 & -16$\pm$0.13 & 21.85$\pm$0.36 & 0.55 & 1.47 \\
+FCC306 & FDS7\_DWARF310 & 2018 & 56.439095 & -36.3461 & 7.26$\pm$0.71 & -15.91$\pm$0.11 & 21.33$\pm$0.31 & 0.59 & 0.9 \\
+FCC253 & FDS13\_DWARF042 & 2018 & 55.230301 & -37.837627 & 10.92$\pm$1.36 & -15.83$\pm$0.14 & 22.35$\pm$0.39 & 0.62 & 1.13 \\
+FCC274 & FDS6\_DWARF208 & 2015 & 55.571922 & -35.540737 & 12.05$\pm$1.62 & -15.75$\pm$0.15 & 23.12$\pm$0.43 & 0.96 & 1.26 \\
+FCC298 & FDS6\_DWARF098 & 2018 & 56.18507 & -35.683716 & 6.97$\pm$0.71 & -15.62$\pm$0.11 & 21.73$\pm$0.32 & 0.71 & 1.19 \\
+FCC264 & FDS6\_DWARF170 & 2015 & 55.382313 & -35.58955 & 10.27$\pm$1.34 & -15.51$\pm$0.14 & 22.06$\pm$0.41 & 0.4 & 1.05 \\
+FCC195 & FDS10\_DWARF014 & 2016 & 54.347183 & -34.900108 & 12.78$\pm$1.92 & -15.44$\pm$0.16 & 22.92$\pm$0.48 & 0.54 & 1.06 \\
+FCC250 & FDS13\_DWARF258 & 2018 & 55.184971 & -37.408268 & 9.22$\pm$1.27 & -15.06$\pm$0.15 & 22.97$\pm$0.44 & 0.76 & 0.84 \\
+FCC178 & FDS10\_DWARF302 & 2016 & 54.202728 & -34.280102 & 11.26$\pm$1.76 & -15.02$\pm$0.17 & 23.37$\pm$0.5 & 0.71 & 1.24 \\
+FCC134 & FDS15\_DWARF223 & 2016 & 53.590393 & -34.592522 & 6.52$\pm$0.84 & -14.6$\pm$0.14 & 22.36$\pm$0.41 & 0.57 & 0.81 \\
+FCC51 & FDS21\_DWARF129 & 2018 & 51.776043 & -36.636787 & 4.45$\pm$0.52 & -14.15$\pm$0.13 & 22.21$\pm$0.37 & 0.7 & 0.96 \\ 
+\hline
+\end{tabular}
+}}
+\end{center}
+\end{table*}
+
 
 \section{Methods}
 
@@ -178,7 +245,7 @@ By defining luminosity and mass as $L=c_1I_e{r_e}^2$ and $M=c_2{\sigma_0}^2r_2$,
 In Fig.\ref{fig:FPkappa} we see distribution of SAMI-Fornax galaxies in kappa space, together with Toloba et al. (2011) sets of dwarf galaxies within Virgo galaxies. Their observations were done in V and K band , so we needed to transform them to r band first by using transformations between magnitude systems. \textbf{[what we see?]}
 \begin{figure}[!htb]
    \centering
-   \includegraphics[width=10cm,height=8cm,keepaspectrati]
+   \includegraphics[width=10cm,height=8cm,keepaspectratio]
    {../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf}
          \caption{FP in $\kappa$ space}
          \label{fig:FPkappa}
@@ -188,7 +255,8 @@ In Fig.\ref{fig:FPkappa} we see distribution of SAMI-Fornax galaxies in kappa sp
 \subsection{Faber Jackson}
 \begin{figure*}[!htb]
    \centering
-   \includegraphics[width=37cm,height=8cm,keepaspectratio]{../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf}
+   \includegraphics[width=37cm,height=8cm,keepaspectratio]
+   {../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf}
          \caption{Faber Jackson Relation}
          \label{fig:FJ}
 \end{figure*}
@@ -209,7 +277,7 @@ To have a look at stellar population and ?? of these objects, one can have a loo
 \textbf{[Discussion]} 
 \begin{figure}[!htb]
    \centering
-   \includegraphics[width=10cm,height=20cm,keepaspectratio]{../2_pipeline/3_color_Disp/Color_Disp.pdf}
+   \includegraphics[width=10cm,height=20cm,keepaspectratio]{../2_pipeline/2_color_Disp/Color_Disp.pdf}
          \caption{Color vs. Dispersion}
          \label{fig:CI-S}
 \end{figure}
