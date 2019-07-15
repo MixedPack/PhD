@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.5.1)  12 JUL 2019 15:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.5.1)  15 JUL 2019 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -674,9 +674,6 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 LaTeX Info: Redefining \not on input line 1043.
 ) (./aa.aux
 
-LaTeX Warning: Label `fig:ML' multiply defined.
-
-
 LaTeX Warning: Label `FigVelDis' multiply defined.
 
 
@@ -897,250 +894,203 @@ LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
 
 Underfull \vbox (badness 2035) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 
-LaTeX Warning: Command \r invalid in math mode on input line 88.
+LaTeX Warning: Command \r invalid in math mode on input line 89.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 88.
+LaTeX Warning: Command \r invalid in math mode on input line 89.
 
 
-Overfull \hbox (28.9252pt too wide) in paragraph at lines 100--120
+Overfull \hbox (28.9252pt too wide) in paragraph at lines 101--121
  [][] 
  []
 
 [2]
-<../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf, id=19, 1445.4pt x 505.89pt
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+<../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf, id=22, 1445.4pt x 505.89pt
 >
 File: ../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf Graphic file (type pdf
 )
  <use ../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf>
 Package pdftex.def Info: ../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf use
-d on input line 143.
+d on input line 210.
 (pdftex.def)             Requested size: 650.35783pt x 227.62523pt.
 
-<../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.pdf, id=20, 1445.4pt x 505.89pt
+<../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.pdf, id=23, 1445.4pt x 505.89pt
 >
 File: ../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.pdf Graphic file (type pdf
 )
  <use ../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.pdf>
 Package pdftex.def Info: ../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.pdf use
-d on input line 144.
+d on input line 211.
 (pdftex.def)             Requested size: 650.35783pt x 227.62523pt.
 
-Overfull \hbox (126.82713pt too wide) in paragraph at lines 143--145
+Overfull \hbox (126.82713pt too wide) in paragraph at lines 210--212
  [][] 
  []
 
 
-Overfull \hbox (126.82713pt too wide) in paragraph at lines 143--145
+Overfull \hbox (126.82713pt too wide) in paragraph at lines 210--212
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+Underfull \hbox (badness 10000) in paragraph at lines 227--232
 
  []
 
 
-! Package keyval Error: keepaspectrati undefined.
-
-See the keyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.182 .../3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-<../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf, id=21, 462.52798pt x 34
+<../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf, id=24, 462.52798pt x 34
 6.89601pt>
 File: ../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf Graphic file (type 
 pdf)
  <use ../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf>
 Package pdftex.def Info: ../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf 
-used on input line 182.
-(pdftex.def)             Requested size: 284.54123pt x 227.62347pt.
+used on input line 249.
+(pdftex.def)             Requested size: 284.54123pt x 213.40594pt.
 
-Overfull \hbox (28.46643pt too wide) in paragraph at lines 182--183
+Overfull \hbox (28.46643pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
-<../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf, id=22, 1445.4pt x 505.89pt>
+<../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf, id=25, 1445.4pt x 505.89pt>
 File: ../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf>
 Package pdftex.def Info: ../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf used o
-n input line 191.
+n input line 259.
 (pdftex.def)             Requested size: 650.35783pt x 227.62523pt.
 
-Overfull \hbox (126.82713pt too wide) in paragraph at lines 191--192
+Overfull \hbox (126.82713pt too wide) in paragraph at lines 259--260
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 263--266
 
  []
 
-[3] <../2_pipeline/3_color_Disp/Color_Disp.pdf, id=27, 722.7pt x 1084.05pt>
-File: ../2_pipeline/3_color_Disp/Color_Disp.pdf Graphic file (type pdf)
+[4 <../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EXC.pdf>]
+<../2_pipeline/2_color_Disp/Color_Disp.pdf, id=73, 722.7pt x 1084.05pt>
+File: ../2_pipeline/2_color_Disp/Color_Disp.pdf Graphic file (type pdf)
 
-<use ../2_pipeline/3_color_Disp/Color_Disp.pdf>
-Package pdftex.def Info: ../2_pipeline/3_color_Disp/Color_Disp.pdf used on inpu
-t line 212.
+<use ../2_pipeline/2_color_Disp/Color_Disp.pdf>
+Package pdftex.def Info: ../2_pipeline/2_color_Disp/Color_Disp.pdf used on inpu
+t line 280.
 (pdftex.def)             Requested size: 284.53154pt x 426.79733pt.
 
-Overfull \hbox (28.45674pt too wide) in paragraph at lines 212--213
+Overfull \hbox (28.45674pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
 
-<../2_pipeline/3_MassDyn_Luminosity+Liter/DyM-L+Liter.pdf, id=28, 1753.3568pt x
+<../2_pipeline/3_MassDyn_Luminosity+Liter/DyM-L+Liter.pdf, id=74, 1753.3568pt x
  737.35663pt>
 File: ../2_pipeline/3_MassDyn_Luminosity+Liter/DyM-L+Liter.pdf Graphic file (ty
 pe pdf)
  <use ../2_pipeline/3_MassDyn_Luminosity+Liter/DyM-L+Liter.pdf>
 Package pdftex.def Info: ../2_pipeline/3_MassDyn_Luminosity+Liter/DyM-L+Liter.p
-df used on input line 223.
+df used on input line 291.
 (pdftex.def)             Requested size: 1753.35254pt x 737.35483pt.
 
-<../2_pipeline/3_MassDyn_Luminosity+Liter/DyM_StM+Wolf.pdf, id=29, 1445.4pt x 5
-05.89pt>
-File: ../2_pipeline/3_MassDyn_Luminosity+Liter/DyM_StM+Wolf.pdf Graphic file (t
-ype pdf)
- <use ../2_pipeline/3_MassDyn_Luminosity+Liter/DyM_StM+Wolf.pdf>
-Package pdftex.def Info: ../2_pipeline/3_MassDyn_Luminosity+Liter/DyM_StM+Wolf.
-pdf used on input line 230.
-(pdftex.def)             Requested size: 1445.39648pt x 505.88875pt.
-
-
-LaTeX Warning: Float too large for page by 128.9473pt on input line 233.
-
-[4 <../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf> <../2_pipeline/2_FP_LAD
+[5 <../2_pipeline/2_FP_LAD/FP_LAD_x=logR_error_EXC.pdf> <../2_pipeline/2_FP_LAD
 /FP_LAD_x=logS_error_EXC.pdf
 
 pdfTeX warning: pdflatex (file ../2_pipeline/2_FP_LAD/FP_LAD_x=logS_error_EXC.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
->] [5
-
- <../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf> <../2_pipeline/3_FP_kappa+Li
-ter/FP_kappa+Liter_EXC.pdf
-
-pdfTeX warning: pdflatex (file ../2_pipeline/3_FP_kappa+Liter/FP_kappa+Liter_EX
-C.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-LaTeX Warning: Text page 6 contains only floats.
-
-
-Overfull \vbox (20.58282pt too high) has occurred while \output is active []
-
-
-
-LaTeX Warning: Text page 6 contains only floats.
-
-
-Overfull \vbox (20.58282pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (6.58282pt too high) has occurred while \output is active []
-
-
-[6 <../2_pipeline/3_MassDyn_Luminosity+Liter/DyM-L+Liter.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7
-
- <../2_pipeline/3_color_Disp/Color_Disp.pdf>] [8 <../2_pipeline/3_MassDyn_Lumin
-osity+Liter/DyM_StM+Wolf.pdf>]
-<../2_pipeline/1_V&S_Maps/213Velocity_map.pdf, id=377, 2890.8pt x 505.89pt>
+>] [6 <../2_pipeline/2_FJ/Faber_Jackson_x-axis=M_r.pdf>] [7 <../2_pipeline/3_Ma
+ssDyn_Luminosity+Liter/DyM-L+Liter.pdf>]
+<../2_pipeline/1_V&S_Maps/213Velocity_map.pdf, id=282, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/213Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/213Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/213Velocity_map.pdf used on i
-nput line 276.
+nput line 338.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/167Velocity_map.pdf, id=378, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/167Velocity_map.pdf, id=283, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/167Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/167Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/167Velocity_map.pdf used on i
-nput line 277.
+nput line 339.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/219Velocity_map.pdf, id=379, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/219Velocity_map.pdf, id=284, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/219Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/219Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/219Velocity_map.pdf used on i
-nput line 278.
+nput line 340.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/184Velocity_map.pdf, id=380, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/184Velocity_map.pdf, id=285, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/184Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/184Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/184Velocity_map.pdf used on i
-nput line 279.
+nput line 341.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/29Velocity_map.pdf, id=381, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/29Velocity_map.pdf, id=286, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/29Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/29Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/29Velocity_map.pdf used on in
-put line 281.
+put line 343.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/179Velocity_map.pdf, id=382, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/179Velocity_map.pdf, id=287, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/179Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/179Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/179Velocity_map.pdf used on i
-nput line 283.
+nput line 345.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 276--284
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 338--346
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 276--284
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 338--346
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 276--284
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 338--346
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 276--284
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 338--346
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 276--284
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 338--346
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 276--284
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 338--346
  [] 
  []
 
-[9 <../2_pipeline/1_V&S_Maps/213Velocity_map.pdf> <../2_pipeline/1_V&S_Maps/167
-Velocity_map.pdf
+[8
+
+
+ <../2_pipeline/2_color_Disp/Color_Disp.pdf>] [9 <../2_pipeline/1_V&S_Maps/213V
+elocity_map.pdf> <../2_pipeline/1_V&S_Maps/167Velocity_map.pdf
 
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/167Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
@@ -1160,80 +1110,80 @@ F inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/179Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
->] <../2_pipeline/1_V&S_Maps/147Velocity_map.pdf, id=850, 2890.8pt x 505.89pt>
+>] <../2_pipeline/1_V&S_Maps/147Velocity_map.pdf, id=801, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/147Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/147Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/147Velocity_map.pdf used on i
-nput line 293.
+nput line 355.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/83Velocity_map.pdf, id=851, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/83Velocity_map.pdf, id=802, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/83Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/83Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/83Velocity_map.pdf used on in
-put line 294.
+put line 356.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/193Velocity_map.pdf, id=852, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/193Velocity_map.pdf, id=803, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/193Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/193Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/193Velocity_map.pdf used on i
-nput line 295.
+nput line 357.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/153Velocity_map.pdf, id=853, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/153Velocity_map.pdf, id=804, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/153Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/153Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/153Velocity_map.pdf used on i
-nput line 296.
+nput line 358.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/177Velocity_map.pdf, id=854, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/177Velocity_map.pdf, id=805, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/177Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/177Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/177Velocity_map.pdf used on i
-nput line 297.
+nput line 359.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/249Velocity_map.pdf, id=855, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/249Velocity_map.pdf, id=806, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/249Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/249Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/249Velocity_map.pdf used on i
-nput line 298.
+nput line 360.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 293--299
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 355--361
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 293--299
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 355--361
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 293--299
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 355--361
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 293--299
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 355--361
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 293--299
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 355--361
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 293--299
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 355--361
  [] 
  []
 
@@ -1259,80 +1209,80 @@ DF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/249Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<../2_pipeline/1_V&S_Maps/190Velocity_map.pdf, id=1323, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/190Velocity_map.pdf, id=1274, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/190Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/190Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/190Velocity_map.pdf used on i
-nput line 307.
+nput line 369.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/143Velocity_map.pdf, id=1324, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/143Velocity_map.pdf, id=1275, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/143Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/143Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/143Velocity_map.pdf used on i
-nput line 308.
+nput line 370.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/235Velocity_map.pdf, id=1325, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/235Velocity_map.pdf, id=1276, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/235Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/235Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/235Velocity_map.pdf used on i
-nput line 309.
+nput line 371.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/301Velocity_map.pdf, id=1326, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/301Velocity_map.pdf, id=1277, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/301Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/301Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/301Velocity_map.pdf used on i
-nput line 310.
+nput line 372.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/263Velocity_map.pdf, id=1327, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/263Velocity_map.pdf, id=1278, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/263Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/263Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/263Velocity_map.pdf used on i
-nput line 311.
+nput line 373.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/37Velocity_map.pdf, id=1328, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/37Velocity_map.pdf, id=1279, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/37Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/37Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/37Velocity_map.pdf used on in
-put line 312.
+put line 374.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 307--313
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 369--375
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 307--313
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 369--375
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 307--313
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 369--375
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 307--313
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 369--375
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 307--313
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 369--375
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 307--313
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 369--375
  [] 
  []
 
@@ -1357,80 +1307,80 @@ DF inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/37Velocity_map.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
->] <../2_pipeline/1_V&S_Maps/33Velocity_map.pdf, id=1798, 2890.8pt x 505.89pt>
+>] <../2_pipeline/1_V&S_Maps/33Velocity_map.pdf, id=1749, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/33Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/33Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/33Velocity_map.pdf used on in
-put line 321.
+put line 383.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/285Velocity_map.pdf, id=1799, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/285Velocity_map.pdf, id=1750, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/285Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/285Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/285Velocity_map.pdf used on i
-nput line 322.
+nput line 384.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/182Velocity_map.pdf, id=1800, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/182Velocity_map.pdf, id=1751, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/182Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/182Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/182Velocity_map.pdf used on i
-nput line 323.
+nput line 385.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/136Velocity_map.pdf, id=1801, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/136Velocity_map.pdf, id=1752, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/136Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/136Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/136Velocity_map.pdf used on i
-nput line 324.
+nput line 386.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/106Velocity_map.pdf, id=1802, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/106Velocity_map.pdf, id=1753, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/106Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/106Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/106Velocity_map.pdf used on i
-nput line 325.
+nput line 387.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/202Velocity_map.pdf, id=1803, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/202Velocity_map.pdf, id=1754, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/202Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/202Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/202Velocity_map.pdf used on i
-nput line 326.
+nput line 388.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 321--327
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 383--389
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 321--327
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 383--389
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 321--327
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 383--389
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 321--327
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 383--389
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 321--327
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 383--389
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 321--327
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 383--389
  [] 
  []
 
@@ -1456,80 +1406,80 @@ DF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/202Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<../2_pipeline/1_V&S_Maps/113Velocity_map.pdf, id=2266, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/113Velocity_map.pdf, id=2217, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/113Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/113Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/113Velocity_map.pdf used on i
-nput line 335.
+nput line 397.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/222Velocity_map.pdf, id=2267, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/222Velocity_map.pdf, id=2218, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/222Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/222Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/222Velocity_map.pdf used on i
-nput line 336.
+nput line 398.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/100Velocity_map.pdf, id=2268, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/100Velocity_map.pdf, id=2219, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/100Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/100Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/100Velocity_map.pdf used on i
-nput line 337.
+nput line 399.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/203Velocity_map.pdf, id=2269, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/203Velocity_map.pdf, id=2220, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/203Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/203Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/203Velocity_map.pdf used on i
-nput line 338.
+nput line 400.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/135Velocity_map.pdf, id=2270, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/135Velocity_map.pdf, id=2221, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/135Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/135Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/135Velocity_map.pdf used on i
-nput line 339.
+nput line 401.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/207Velocity_map.pdf, id=2271, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/207Velocity_map.pdf, id=2222, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/207Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/207Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/207Velocity_map.pdf used on i
-nput line 340.
+nput line 402.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 335--341
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 397--403
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 335--341
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 397--403
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 335--341
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 397--403
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 335--341
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 397--403
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 335--341
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 397--403
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 335--341
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 397--403
  [] 
  []
 
@@ -1555,80 +1505,80 @@ DF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/207Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<../2_pipeline/1_V&S_Maps/245Velocity_map.pdf, id=2736, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/245Velocity_map.pdf, id=2686, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/245Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/245Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/245Velocity_map.pdf used on i
-nput line 349.
+nput line 411.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/252Velocity_map.pdf, id=2737, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/252Velocity_map.pdf, id=2687, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/252Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/252Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/252Velocity_map.pdf used on i
-nput line 350.
+nput line 412.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/300Velocity_map.pdf, id=2738, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/300Velocity_map.pdf, id=2688, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/300Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/300Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/300Velocity_map.pdf used on i
-nput line 351.
+nput line 413.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/266Velocity_map.pdf, id=2739, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/266Velocity_map.pdf, id=2689, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/266Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/266Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/266Velocity_map.pdf used on i
-nput line 352.
+nput line 414.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/46Velocity_map.pdf, id=2740, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/46Velocity_map.pdf, id=2690, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/46Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/46Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/46Velocity_map.pdf used on in
-put line 353.
+put line 415.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/188Velocity_map.pdf, id=2741, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/188Velocity_map.pdf, id=2691, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/188Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/188Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/188Velocity_map.pdf used on i
-nput line 354.
+nput line 416.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 349--355
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 411--417
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 349--355
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 411--417
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 349--355
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 411--417
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 349--355
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 411--417
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 349--355
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 411--417
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 349--355
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 411--417
  [] 
  []
 
@@ -1654,80 +1604,80 @@ F inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/188Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<../2_pipeline/1_V&S_Maps/211Velocity_map.pdf, id=3211, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/211Velocity_map.pdf, id=3162, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/211Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/211Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/211Velocity_map.pdf used on i
-nput line 363.
+nput line 425.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/164Velocity_map.pdf, id=3212, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/164Velocity_map.pdf, id=3163, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/164Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/164Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/164Velocity_map.pdf used on i
-nput line 364.
+nput line 426.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/306Velocity_map.pdf, id=3213, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/306Velocity_map.pdf, id=3164, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/306Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/306Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/306Velocity_map.pdf used on i
-nput line 365.
+nput line 427.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/253Velocity_map.pdf, id=3214, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/253Velocity_map.pdf, id=3165, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/253Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/253Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/253Velocity_map.pdf used on i
-nput line 366.
+nput line 428.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/274Velocity_map.pdf, id=3215, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/274Velocity_map.pdf, id=3166, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/274Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/274Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/274Velocity_map.pdf used on i
-nput line 367.
+nput line 429.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/298Velocity_map.pdf, id=3216, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/298Velocity_map.pdf, id=3167, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/298Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/298Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/298Velocity_map.pdf used on i
-nput line 368.
+nput line 430.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 363--369
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 425--431
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 363--369
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 425--431
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 363--369
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 425--431
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 363--369
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 425--431
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 363--369
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 425--431
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 363--369
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 425--431
  [] 
  []
 
@@ -1753,80 +1703,80 @@ DF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../2_pipeline/1_V&S_Maps/298Velocity_map.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-<../2_pipeline/1_V&S_Maps/264Velocity_map.pdf, id=3685, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/264Velocity_map.pdf, id=3636, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/264Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/264Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/264Velocity_map.pdf used on i
-nput line 377.
+nput line 439.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/195Velocity_map.pdf, id=3686, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/195Velocity_map.pdf, id=3637, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/195Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/195Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/195Velocity_map.pdf used on i
-nput line 378.
+nput line 440.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/250Velocity_map.pdf, id=3687, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/250Velocity_map.pdf, id=3638, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/250Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/250Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/250Velocity_map.pdf used on i
-nput line 379.
+nput line 441.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/178Velocity_map.pdf, id=3688, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/178Velocity_map.pdf, id=3639, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/178Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/178Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/178Velocity_map.pdf used on i
-nput line 380.
+nput line 442.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/134Velocity_map.pdf, id=3689, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/134Velocity_map.pdf, id=3640, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/134Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/134Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/134Velocity_map.pdf used on i
-nput line 381.
+nput line 443.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-<../2_pipeline/1_V&S_Maps/51Velocity_map.pdf, id=3690, 2890.8pt x 505.89pt>
+<../2_pipeline/1_V&S_Maps/51Velocity_map.pdf, id=3641, 2890.8pt x 505.89pt>
 File: ../2_pipeline/1_V&S_Maps/51Velocity_map.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_V&S_Maps/51Velocity_map.pdf>
 Package pdftex.def Info: ../2_pipeline/1_V&S_Maps/51Velocity_map.pdf used on in
-put line 382.
+put line 444.
 (pdftex.def)             Requested size: 597.51405pt x 104.56494pt.
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 377--383
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 439--445
  [][] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 377--383
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 439--445
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 377--383
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 439--445
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 377--383
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 439--445
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 377--383
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 439--445
  [] 
  []
 
 
-Overfull \hbox (73.98335pt too wide) in paragraph at lines 377--383
+Overfull \hbox (73.98335pt too wide) in paragraph at lines 439--445
  [] 
  []
 
@@ -1861,17 +1811,16 @@ F inclusion: multiple pdfs with page group included in a single page
 
 
 
-
 ] (./aa.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7111 strings out of 494820
- 104966 string characters out of 3178050
- 169760 words of memory out of 3000000
- 10046 multiletter control sequences out of 15000+200000
+ 7105 strings out of 494820
+ 104682 string characters out of 3178050
+ 207760 words of memory out of 3000000
+ 10041 multiletter control sequences out of 15000+200000
  94511 words of font info for 149 fonts, out of 3000000 for 9000
  198 hyphenation exceptions out of 8191
  41i,11n,45p,1901b,345s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1886,10 +1835,10 @@ xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aa.pdf (17 pages, 19223418 bytes).
+Output written on aa.pdf (17 pages, 19197096 bytes).
 PDF statistics:
- 4202 PDF objects out of 4296 (max. 8388607)
- 1129 compressed objects within 12 object streams
+ 4153 PDF objects out of 4296 (max. 8388607)
+ 1120 compressed objects within 12 object streams
  0 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
