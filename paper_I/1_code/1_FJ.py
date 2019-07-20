@@ -1,0 +1,34 @@
+import numpy as npimport matplotlib.pyplot as pltfrom astropy.io import fitsimport csvimport mathfrom numpy.polynomial.polynomial import polyfitfrom mpl_toolkits.axes_grid1 import make_axes_locatableimport pandas as pd#x_axis = "M_r"
+x_axis = "sigma"
+name = 0
+exclude = 1
+
+#*************************SAMI Input values*********************************************if exclude == 1:	Galaxies = pd.read_csv('../2_pipeline/0_Galaxies_Table/Galaxies_Table_EXC.csv')	else:
+	Galaxies = pd.read_csv('../2_pipeline/0_Galaxies_Table/Galaxies_Table.csv')	
+FCC_index = Galaxies['FCC']M_r = Galaxies['M_r(mag)']mu_r = Galaxies['mu_r(mag/arcsec2)'] 	#surface brightness calculated with Re in arcsecR_eff = Galaxies['R_e(arcsec)']if exclude == 1:	Kinematics = pd.read_csv('../2_pipeline/0_Kinematics_Table/Kinematics_Table_EXC.csv')else:
+	Kinematics = pd.read_csv('../2_pipeline/0_Kinematics_Table/Kinematics_Table.csv')
+Dispersion = Kinematics['Sigma']Disp_error = Kinematics['Error.Sigma']#****************Plotting Faber_Jackson relation****************************************cm = plt.cm.get_cmap('spring')if x_axis == "sigma":
+	y = M_r	x = np.log10(Dispersion)	x_err = (Disp_error)/(Dispersion*np.log(10))
+if x_axis == "M_r":
+	x = M_r	y = np.log10(Dispersion)	y_err = (Disp_error)/(Dispersion*np.log(10))	b, m = polyfit(x, y, 1)fitline = b + m * xfig = plt.figure(figsize = (20,7))ax = fig.add_subplot(1, 1, 1)if x_axis == "sigma":
+	plt.errorbar(x, y, xerr=x_err, fmt='.', ecolor='green')if x_axis == "M_r":
+	plt.errorbar(x, y, yerr=y_err, fmt='.', ecolor='green')
+plt.scatter(x, y, s=R_eff*5, c=mu_r, cmap=cm)
+if x_axis == "sigma":
+	plt.gca().invert_yaxis()
+if x_axis == "M_r":
+	plt.gca().invert_xaxis() cbar = plt.colorbar()cbar.ax.invert_yaxis() cbar.set_label('$\mu_e$', rotation=-270, fontsize=16)cbar.ax.tick_params(labelsize=16)
+plt.plot(x, fitline, c='grey')if name == 1:
+	for i in range(len(FCC_index)):			plt.annotate(str(int(FCC_index[i])), (x[i], y[i]), fontsize=12)
+if x_axis == "sigma":
+	textstr = ' $M_r$ =' + str("%.2f" % m) + 'log($\sigma_{15}$)' + str("%.2f" % b)	plt.title(textstr, y=1.05, fontsize=18)	plt.xlabel('log($\sigma_{15}$) (km/s)', fontsize=18)	plt.ylabel('$M_r$ (mag)', fontsize=18)
+if x_axis == "M_r":
+	textstr = 'log($\sigma_{15}$) = ' + str("%.2f" % m) + ' $M_r$ ' + str("%.2f" % b)	plt.title(textstr, y=1.05, fontsize=18)	plt.ylabel('log($\sigma_{15}$) (km/s)', fontsize=18)	plt.xlabel('$M_r$ (mag)', fontsize=18)
+	
+plt.tick_params(axis='both', which='major', labelsize=16)if exclude == 1:	if x_axis == "sigma":
+		fig.savefig('../2_pipeline/1_FJ/Faber_Jackson_x-axis=sigma_EXC.pdf')	if x_axis == "M_r":
+		fig.savefig('../2_pipeline/1_FJ/Faber_Jackson_x-axis=M_r_EXC.pdf')else:
+	if x_axis == "sigma":
+		fig.savefig('../2_pipeline/1_FJ/Faber_Jackson_x-axis=sigma.pdf')	if x_axis == "M_r":
+		fig.savefig('../2_pipeline/1_FJ/Faber_Jackson_x-axis=M_r.pdf')
+#************************For test - FJ inputs: sigma************************************out_file = open('../2_pipeline/1_FJ/FJ_input_sigma.txt', 'w+')out_file.write("Name" + "\t" + "SB" + "\t" + "Sigma" + "\t" + "error" + "\n")for i in range(len(FCC_index)):	out_file.write( str(int(FCC_index[i])) + "\t " + str("%.2f" % mu_r[i]) + "\t" + str("%.2f" % Dispersion[i]) + "\t" + str("%.2f" % Disp_error[i]) + "\n")out_file.close()
