@@ -7,7 +7,7 @@ import math
 from numpy.polynomial.polynomial import polyfit
 
 #The list of Good SAMI_2015&2016 galaxies - with their FCC and FDS names
-with open( '../0_data/tmp/Chosen_FCC_FDS.csv', 'r' ) as f:
+with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
     name = csv.reader(f)
     name_list = list(map(tuple, name))
 
