@@ -7,8 +7,7 @@ import math
 from numpy.polynomial.polynomial import polyfit
 
 #The list of Good SAMI_2015&2016 galaxies - with their FCC and FDS names
-#with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
-with open( '../0_data/tmp/NotChosen_FCC_FDS.csv', 'r' ) as f:
+with open( '../0_data/Literature/FCC_FDS.csv', 'r' ) as f:
     name = csv.reader(f)
     name_list = list(map(tuple, name))
 
@@ -20,6 +19,8 @@ hdulist_Ferguson = pyfits.open('../0_data/Literature/FergusonCatalog.fit')
 #FDS's Catalog (2018) (faint and giant Fornax galaxies with their errors)
 hdulist_FDS = pyfits.open('../0_data/Literature/FDSCatalog_AllError.fits')
 tbdata_FDS = hdulist_FDS[1].data
+hdulist_FDS_BG = pyfits.open('../0_data/Literature/FDSCatalog_BackGround.fits')
+tbdata_FDS_BG = hdulist_FDS_BG[1].data
 
 COV_mr_logRe2 = -0.00528375
 
@@ -74,6 +75,31 @@ for l in range(size):
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
 			ERR_log_mass[l] = np.sqrt(0.49*(ERR_g**2+ERR_i**2) + 0.16*ERR_m_r[l]**2 + 0.16*(ERR_r**2+ERR_i**2))/(log_mass[l]*np.log(10))
 			sersic_index[l] = tbdata_FDS.field('n')[j]
+	
+	if name_FCC == 'FCC290':										#FCC290 (Back Ground galaxy in FDS catalog)
+		for j in range(len(tbdata_FDS_BG.field('target'))):
+			if tbdata_FDS_BG.field('target')[j]==name_FDS:
+				RA[l] = tbdata_FDS_BG.field('RA')[j]
+				DEC[l] = tbdata_FDS_BG.field('DEC')[j]
+				M_r[l] = tbdata_FDS_BG.field('r_mag')[j] - 31.51
+				#ERR_m_r[l] = tbdata_FDS_BG.field('r_mag_e')[j]
+				M_g[l] = tbdata_FDS_BG.field('g_mag')[j] - 31.51
+				#ERR_m_g[l] = tbdata_FDS_BG.field('g_mag_e')[j]
+				R_eff[l] = tbdata_FDS_BG.field('Reff')[j]
+				#ERR_R_eff[l] = tbdata_FDS_BG.field('reff_e')[j]
+				axis_ratio[l] = tbdata_FDS_BG.field('axis_ratio')[j]
+				mu_r[l] = tbdata_FDS_BG.field('r_mag')[j] + 2.5 * np.log10(math.pi*axis_ratio[l]*math.pow(R_eff[l],2)) + 2.5 * np.log10(2)
+				#ERR_mu_r[l] = ERR_m_r[l] + (5 / np.log(10)) * (ERR_R_eff[l] / R_eff[l]) + 2.5 * COV_mr_logRe2
+				u[l] = tbdata_FDS_BG.field('u')[j]
+				g[l] = tbdata_FDS_BG.field('g')[j]
+				r[l] = tbdata_FDS_BG.field('r')[j]
+				i[l] = tbdata_FDS_BG.field('i')[j]
+				#ERR_g = tbdata_FDS.field('g_e')[j]
+				#ERR_r = tbdata_FDS.field('r_e')[j]
+				#ERR_i = tbdata_FDS.field('i_e')[j]
+				log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
+				#ERR_log_mass[l] = np.sqrt(0.49*(ERR_g**2+ERR_i**2) + 0.16*ERR_m_r[l]**2 + 0.16*(ERR_r**2+ERR_i**2))/(log_mass[l]*np.log(10))
+				sersic_index[l] = tbdata_FDS_BG.field('n')[j]
 
 xFit = [g[k]-r[k] for k in range(size) if u[k]-g[k] > 0.0]
 yFit = [u[k]-g[k] for k in range(size) if u[k]-g[k] > 0.0]
@@ -90,6 +116,7 @@ for l in range(size):
 			plt.plot(g[l]-r[l], u[l]-g[l], 'x')
 #plt.show()
 
+
 #writing a csv output
 ListDict = []
 for l in range(size):
@@ -102,7 +129,7 @@ for l in range(size):
 			'u':"%.4f" % u[l], 'g':"%.4f" % g[l], 'r':"%.4f" % r[l], 'i':"%.4f" % i[l]}
 	ListDict.append(dict.copy())
 
-with open('../2_pipeline/0_Galaxies_Table/NotGalaxies_Table.csv', 'w') as output_file:
+with open('../2_pipeline/0_Galaxies_Table/Galaxies_Table.csv', 'w') as output_file:
     dict_writer = csv.DictWriter(output_file, dict.keys())
     dict_writer.writeheader()
     dict_writer.writerows(ListDict)
