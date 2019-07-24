@@ -7,17 +7,17 @@ import math
 from numpy.polynomial.polynomial import polyfit
 
 #The list of Good SAMI_2015&2016 galaxies - with their FCC and FDS names
-with open( '../../0_data/tmp/Chosen_FCC_FDS.csv', 'r' ) as f:
+with open( '../../0_data/tmp/NotChosen_FCC_FDS.csv', 'r' ) as f:
     name = csv.reader(f)
     name_list = list(map(tuple, name))
 
 size = len(name_list)
 
 #Online Vizier Catalog - Ferguson
-hdulist_Ferguson = pyfits.open('../../0_data/Literature/FergusonCatalog.fit')
+hdulist_Ferguson = pyfits.open('../../../0_data/Literature/FergusonCatalog.fit')
 
 #FDS's Catalog (2018) (faint and giant Fornax galaxies with their errors)
-hdulist_FDS = pyfits.open('../../0_data/Literature/FDSCatalog_AllError.fits')
+hdulist_FDS = pyfits.open('../../../0_data/Literature/FDSCatalog_AllError.fits')
 tbdata_FDS = hdulist_FDS[1].data
 
 COV_mr_logRe2 = -0.00528375
@@ -87,7 +87,6 @@ for l in range(size):
 	if name_FCC=='FCC37' or name_FCC=='FCC46' or name_FCC=='FCC33' or name_FCC=='FCC29':
 			u[l] = g[l] + b + (g[l]-r[l])*m
 			plt.plot(g[l]-r[l], u[l]-g[l], 'x')
-#plt.show()
 
 #writing a csv output
 ListDict = []
@@ -104,7 +103,7 @@ for l in range(size):
 			}
 	ListDict.append(dict.copy())
 
-with open('./Chosen_Galaxies_Table.csv', 'w') as output_file:
+with open('./NotChosen_Galaxies_Table.csv', 'w') as output_file:
     dict_writer = csv.DictWriter(output_file, dict.keys())
     dict_writer.writeheader()
     dict_writer.writerows(ListDict)
