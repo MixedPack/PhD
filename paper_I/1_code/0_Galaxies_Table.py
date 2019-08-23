@@ -21,6 +21,8 @@ hdulist_FDS = pyfits.open('../0_data/Literature/FDSCatalog_AllError.fits')
 tbdata_FDS = hdulist_FDS[1].data
 hdulist_FDS_BG = pyfits.open('../0_data/Literature/FDSCatalog_BackGround.fits')
 tbdata_FDS_BG = hdulist_FDS_BG[1].data
+hdulist_FDSClass = pyfits.open('../0_data/Literature/FDSCatalog_DwarfError.fit')
+tbdata_FDSClass = hdulist_FDSClass[1].data
 
 COV_mr_logRe2 = -0.00528375
 
@@ -39,6 +41,7 @@ ERR_mu_r = np.zeros(size)
 ERR_R_eff = np.zeros(size)
 ERR_log_mass = np.zeros(size)
 sersic_index = np.zeros(size)
+clas = np.empty([size], dtype="object")
 
 #stellar_mass = np.zeros(size)
 u = np.zeros(size)
@@ -75,7 +78,10 @@ for l in range(size):
 			log_mass[l] = 1.15 + 0.70*(g[l]-i[l]) - 0.4*M_r[l] + 0.4*(r[l]-i[l])
 			ERR_log_mass[l] = np.sqrt(0.49*(ERR_g**2+ERR_i**2) + 0.16*ERR_m_r[l]**2 + 0.16*(ERR_r**2+ERR_i**2))/(log_mass[l]*np.log(10))
 			sersic_index[l] = tbdata_FDS.field('n')[j]
-	
+	for j in range(len(tbdata_FDSClass.field('Target'))):
+		if tbdata_FDSClass.field('Target')[j]==name_FDS:			
+			clas[l] = tbdata_FDSClass.field('Class')[j]
+			
 	if name_FCC == 'FCC290':										#FCC290 (Back Ground galaxy in FDS catalog)
 		for j in range(len(tbdata_FDS_BG.field('target'))):
 			if tbdata_FDS_BG.field('target')[j]==name_FDS:
@@ -126,7 +132,7 @@ for l in range(size):
 			'mu_r(mag/arcsec2)':"%.2f" % mu_r[l], 'ERR_mu_r(mag/arcsec2)':"%.2f" % ERR_mu_r[l] , 
 			'R_e(arcsec)':"%.2f" % R_eff[l], 'ERR_R_e(arcsec)':"%.2f" % ERR_R_eff[l] , 
 			'axis_ratio':"%.2f" % axis_ratio[l], 'Sersic_index':"%.2f" % sersic_index[l],'log10(M_*/M_sun)':"%.4f" % log_mass[l], 'ERR_log10(M_*)':"%.4f" % ERR_log_mass[l],
-			'u':"%.4f" % u[l], 'g':"%.4f" % g[l], 'r':"%.4f" % r[l], 'i':"%.4f" % i[l]}
+			'u':"%.4f" % u[l], 'g':"%.4f" % g[l], 'r':"%.4f" % r[l], 'i':"%.4f" % i[l], 'Class':str(clas[l])}
 	ListDict.append(dict.copy())
 
 with open('../2_pipeline/0_Galaxies_Table/Galaxies_Table.csv', 'w') as output_file:
