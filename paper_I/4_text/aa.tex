@@ -31,7 +31,7 @@
 
    \subtitle{I. Kinematics \& Kinematic Scaling Relation}
 
-   \author{F. S. Eftekhari\inst{1,2}, R. Peletier\inst{1}, S. Mieske\inst{2}, \and N. Scott\inst{3} }
+   \author{F. S. Eftekhari\inst{1,2}, R. Peletier\inst{1},  N. Scott\inst{3}, \and S. Mieske\inst{2}}
 
    \institute{Kapteyn Astronomical Institute, Postbus 800, 9700 AV Groningen, The Netherlands
          \and
@@ -295,8 +295,11 @@ In Fig.\ref{fig:FPkappa} we see distribution of SAMI-Fornax galaxies in kappa sp
 \end{figure}
 
 \subsection{Dynamical Mass}
-Not considering the difference between radial and tangential velocity dispersion weakens our ability to reach accurate conclusions about structure and formations of galaxies. This becomes more important in calculating dynamical mass of a galaxy by only having its 2d observed radial properties. Wolf et al. 2010 showed that within $r_3$ radius this difference is insignificant ...
-Fig.\ref{fig:ML}
+Variety in dark matter fraction of dEs can be accounted as one of the reasons for deviation of dEs from FP (e.g. Reda et al. 2005) or even FP tilt (e.g. Cappellari et al. 2006, and Graves \& Faber 2010). We measure dynamical mass and dark matter fraction of our galaxies within SAMI field-of-view following Wolf et al. 2010. \\Not considering the difference between radial and tangential velocity dispersion weakens the accuracy of conclusions about structure and formations of galaxies. This becomes more important when calculating dynamical mass of a galaxy by only having its 2d observed radial properties. Wolf et al. 2010 using the spherical Jeans equation showed that within $r_3$ radius this difference is insignificant. $r_3$ is where the log-slope of the 3D tracer density profile is -3, and for dispersion supported galaxies it is close to the 3D half-light radius $r_{1/2}$. So the dynamical will be defined as:
+\begin{eqnarray}
+	M_{1/2}\simeq930(\frac{{\sigma_{los}}^2}{{km}^2s^{-2}})(\frac{R_e}{pc})M_{\odot}
+\end{eqnarray}
+where $R_e$ is the 2D projected half-light radius and $\sigma_{los}$ is the line-of-sight velocity dispersion. In Fig.\ref{fig:ML} we expand the relationship between $M_{1/2}$ and the half-light luminosity $L_{1/2}=0.5L$ for elliptical and dwarf elliptical galaxies. The first thing we see is that our galaxies connect well with the brighter dwarfs of Toloba et al (2014) and elliptical galaxies of Falcon-Barroso et al. 2010 both within Virgo cluster also the Local Group dwarfs from Wolf et al (2010). This means that the dark matter properties of these dwarfs in clusters are the same as in the Local Group, implying that the dark matter distribution inside the galaxies is not affected by the cluster environment. Moreover, as emphasized in Wolf et al 2010 and Zaritsky et al. 2006 dEs are sitting at the minimum of the parabola relation between dynamical half-light mass-to-light ratio and velocity dispersion. Position of the minimum and its corresponding mass scales are important as it's the turnover point between two different star formation scenario of bright and faint systems. Three different power-law regimes / two different regimes? what they mean? 
 
 \begin{figure}[!htb]
    \centering
@@ -304,11 +307,12 @@ Fig.\ref{fig:ML}
   	 \caption{Dynamical Mass vs. Luminosity ratio \textbf{[info box must be added]}}
          \label{fig:ML}
 \end{figure}
+
 \begin{figure}[!htb]
    \centering
    \includegraphics[width=8cm]{../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf}   		
   	 \caption{Stellar Mass vs. Luminosity ratio \textbf{[info box must be added]}}
-         \label{fig:ML}
+         \label{fig:MM}
 \end{figure}
 
 \subsection{Color vs. $\sigma$}
