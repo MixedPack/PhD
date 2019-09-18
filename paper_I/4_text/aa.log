@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 JUL 2019 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 SEP 2019 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -778,17 +778,14 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 (Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
 LaTeX Info: Redefining \not on input line 1043.
-) (./aa.aux
-
-LaTeX Warning: Label `fig:ML' multiply defined.
-
-)
+) (./aa.aux)
 \openout1 = `aa.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 27.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 27.
 
- (/usr/local/texlive/2017/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -1056,51 +1053,50 @@ File: ../2_pipeline/2_FP_kappa+Liter/FP_kappa+Liter_DWARF.pdf Graphic file (typ
 e pdf)
  <use ../2_pipeline/2_FP_kappa+Liter/FP_kappa+Liter_DWARF.pdf>
 Package pdftex.def Info: ../2_pipeline/2_FP_kappa+Liter/FP_kappa+Liter_DWARF.pd
-f used on input line 290.
+f used on input line 292.
 (pdftex.def)             Requested size: 284.54123pt x 213.40594pt.
 
-Overfull \hbox (28.46643pt too wide) in paragraph at lines 289--291
+Overfull \hbox (28.46643pt too wide) in paragraph at lines 291--293
  [][] 
  []
 
-
-<../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf, id=25, 633.171
+[4]
+<../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf, id=29, 633.171
 8pt x 2293.49033pt>
 File: ../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf Graphic fi
 le (type pdf)
 
 <use ../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf>
 Package pdftex.def Info: ../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_D
-WARF.pdf used on input line 301.
+WARF.pdf used on input line 306.
 (pdftex.def)             Requested size: 196.37784pt x 711.3189pt.
 
 
-LaTeX Warning: Float too large for page by 38.3189pt on input line 304.
+LaTeX Warning: Float too large for page by 38.3189pt on input line 309.
 
 
-<../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf, id=26, 722.7
+<../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf, id=30, 722.7
 pt x 1445.4pt>
 File: ../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf Graphic 
 file (type pdf)
 
 <use ../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf>
 Package pdftex.def Info: ../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter
-_DWARF.pdf used on input line 307.
+_DWARF.pdf used on input line 313.
 (pdftex.def)             Requested size: 227.62204pt x 455.23724pt.
 
-<../2_pipeline/1_color_Disp/Color_Disp.pdf, id=27, 722.7pt x 1084.05pt>
+<../2_pipeline/1_color_Disp/Color_Disp.pdf, id=31, 722.7pt x 1084.05pt>
 File: ../2_pipeline/1_color_Disp/Color_Disp.pdf Graphic file (type pdf)
 
 <use ../2_pipeline/1_color_Disp/Color_Disp.pdf>
 Package pdftex.def Info: ../2_pipeline/1_color_Disp/Color_Disp.pdf used on inpu
-t line 317.
+t line 323.
 (pdftex.def)             Requested size: 284.53154pt x 426.79733pt.
 
-Overfull \hbox (28.45674pt too wide) in paragraph at lines 317--318
+Overfull \hbox (28.45674pt too wide) in paragraph at lines 323--324
  [][] 
  []
 
-[4]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1110,46 +1106,41 @@ Package natbib Warning: There were undefined citations.
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../2_pipeline/2_FP_LAD_onlyd
 E+useLiter/rev_FP_LAD+Liter_x=logS_DWARF.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
-> <../2_pipeline/2_FP_kappa+Liter/FP_kappa+Liter_DWARF.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../2_pipeline/2_FP_kappa+Lit
-er/FP_kappa+Liter_DWARF.pdf): PDF inclusion: multiple pdfs with page group incl
-uded in a single page
->] [6 <../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf> <../2_pi
-peline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf
+>] [6 <../2_pipeline/2_FP_kappa+Liter/FP_kappa+Liter_DWARF.pdf> <../2_pipeline/
+2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../2_pipeline/2_MassDyn_Lumi
-nosity+Liter/DyM_StM+Liter_DWARF.pdf): PDF inclusion: multiple pdfs with page g
-roup included in a single page
->] [7
+nosity+Liter/DyM-L+Liter_DWARF.pdf): PDF inclusion: multiple pdfs with page gro
+up included in a single page
+>] [7 <../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf> <../2_
+pipeline/1_color_Disp/Color_Disp.pdf
 
- <../2_pipeline/1_color_Disp/Color_Disp.pdf>] [8] (./aa.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../2_pipeline/1_color_Disp/C
+olor_Disp.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>] [8] (./aa.aux) ) 
 Here is how much of TeX's memory you used:
- 7148 strings out of 492995
- 99071 string characters out of 6132704
- 226540 words of memory out of 5000000
- 10494 multiletter control sequences out of 15000+600000
+ 7149 strings out of 492995
+ 99079 string characters out of 6132704
+ 226509 words of memory out of 5000000
+ 10495 multiletter control sequences out of 15000+600000
  94511 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,45p,1901b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/txfonts/txsy.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/he
-lvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utm
-b8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on aa.pdf (8 pages, 265236 bytes).
+ 41i,12n,45p,1901b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.
+enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on aa.pdf (8 pages, 267322 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
+ 432 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
