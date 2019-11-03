@@ -15,7 +15,7 @@
 %
 \documentclass{aa}  
 \usepackage{caption}
-\usepackage{graphicx}
+\usepackage{graphicx,subcaption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{txfonts}
 
@@ -33,8 +33,7 @@
 
    \author{F. S. Eftekhari\inst{1,2}, R. Peletier\inst{1},  N. Scott\inst{3}, \and S. Mieske\inst{2}}
 
-   \institute{Kapteyn Astronomical Institute, Postbus 800, 9700 AV Groningen, The Netherlands
-         \and
+   \institute{Kapteyn Astronomical Institute, Postbus 800, 9700 AV Groningen, The Netherlands         \and
              European Southern Observatory, Alonso de C$\acute{o}$rdova 3107, Vitacura, Santiago, Chile    
          \and
              ??}
@@ -65,63 +64,65 @@
 
 \section{Introduction}
 
-   Still after decades of studying dwarf galaxies, the formation and evolution of these objects is considered an active debate. Over the past few years, alongside improvement of observation the idea behind the lifeline of these faint and small objects had become clearer (e.g. Ry$\acute{s}$ et al. 2013, Toloba et al. 2015, Venhola et al. 2018). However, the need for more detailed and precise data to close this debate is still on the table. Thus with high resolution multiplexing deep-SAMI data cubes and statistically significant sample of dEs in Fornax cluster, we've started a new journey to collect new information from kinematics, chemical composition and structure of these faint objects. \\Why studying these faint objects is important, how we approached these questions, and what new results and clues are accomplished are the questions which are going to be investigated in this research. This is the first paper of the Spectroscopic Analysis of Fornax Dwarf Galaxies series, and is dedicated to kinematic studies of dwarf early-type galaxies within Fronax galaxy cluster. The section 1 will continue to inspect why dwarf galaxies received lots of attention in the past decades. Section 2 will be dedicated to the details of our data and its comparison to previous observations. In section 3 \& 4, we'll explain the methods that have been used and our results respectively. Finally, Section 5 will present the discussion and conclusions.   
-\subsection{Why dwarf galaxies?}
+%\begin{itemize}
+%	\item (DONE) Evolution of galaxies in clusters and environmental effects, finishing with explaining harassment \& ram-pressure stripping
+%	\item (DONE)These effects in Fornax cluster(why Fornax), finishing with details of Fornax 
+%	\item (DONE) Dwarf are more vulnerable to environment, what dwarfs are, and what are the discoveries about dwarfs
+%	\item SAMI (how we approach these problems) \& FDS catalog
+%	\item sections of this paper
+%\end{itemize}
 
-Different theories and ideas about the formation history of the big zoo of galaxies have been developed in the past decades. For galaxies inside clusters one of the main mechanisms governing their formation and evolution is environmental effects such as ram-pressure stripping (Lin \& Faber 1983), harassment (Moore et al. 1998), or starvation (Larson et al. 1980). An ideal source to investigate the role of environment are dwarf galaxies, since they have low mass and low density and thus are more vulnerable to environmental effects.
-\subsection{What we know about dwarfs?}
-Dwarf galaxies despite their plain appearance and smooth light distribution have complex characteristics (Lisker 2006), which indicate the influence of environment in their past. \\ \textit{Spatial distribution of dwarfs}: early-type dwarf galaxies (dEs) outnumber all other galaxy types in dense environment, like clusters, while late-type low-luminosity galaxies are the dominant population in the fields (e.g. Dressler 1980, Sandage et al. 1985, and Ferguson \& Bingelli 1994).\\ \textit{Inner structure vs. local density of dEs}: A substructure-density relation is seen in early-type dwarf galaxies, such that dEs with blue center or no nucleus are mostly found in low-density cluster regions, dEs with disks in intermediate-density regions, and nucleated dEs in high-density regions of the cluster (Ferguson \& Sandage 1989, van den Bergh 1986, and Lisker et al. 2007). \\ \textit{Color vs. local density of dEs}: dEs in higher density regions are redder compared to other regions (Lisker et al. 2008). \\ \textit{Kinematics vs. local density of dEs}: pressure supported dEs are mostly found in high density regions of cluster, whereas in lower density regions like outskirts the angular momentum of dEs increases and dEs are largely rotationally supported. Also fast rotators in the outer part of the cluster rotate faster than fast rotators in the inner parts of the cluster (Toloba et al. 2009, van Zee et al. 2004a, and Toloba et al. 2015).\\
-Dwarf galaxies's formation history is another key to the formation and evolution of galaxies; whether dwarf galaxies are the descendants in hierarchical structure formation (Moore et al. 1999) and were created by gravitational collapse like other galaxies (Kauffmann \& White 1993), or whether they were formed at later epoch from late-type low-luminosity star forming galaxies by environmental effects (Boselli \& Gavazzi 2006, Gavazzi et al. 2013, and Boselli \& Favazzi 2014). The answer to these questions could be achieved by pursuing the behaviour and location of these galaxies inside galaxy physical parameter space. \\ \textit{Surface brightness profile}: logarithm of the S$\acute{e}$rsic index of both dwarfs and giant early-type galaxies linearly increases with central surface brightness and magnitude, but SB profiles of dEs are less steep than massive ellipticals (Gavazzi et al. 2005, Graham \& Guzm$\acute{a}$n 2013, and Young \& Currie 1994). \\ \textit{Color magnitude relation}: there is no gap seen between dwarfs and giant ellipticals in color magnitude profile (e.g. Ferrarese et al. 2006, Janz \& Lisker 2009, and Misgeld et al. 2008\&2009). \\ \textit{Fundamental plane}: inside fundamental plane it's been seen that dEs are offset with respect to the plane of early-type galaxies (Toloba et al. 2012 and Rijcke et al. 2015). \\ \textit{Disky substructure}: disk-like structures have been seen in fast rotators and dEs in the outer regions of cluster, also they have rotation curves similar to those of late-type galagixes (Toloba et al. 2015 and Toloba et al. 2009). \\ \textit{Star formation}: As the galay's luminosity decreases the duration of star formation increases (Gavazzi et al. 2002), also $H_\beta$ absorption index increases from giants to dwarfs as luminosity and velocity dispersion decreases (Poggianti et al. 2001 and Geha et al 2003).  
+% Dwarfs (1) what they are (2) what we know till now about them (2) why studying is important (4) open questions
+%Talk about Fornax cluster, (1)it's environment, (2) the previous studies done on it, (3) why studying it is important (4) why now and how can we do it
+% FDS (1) what is it (2) how we are using it
+% SAMI What is it and why we chose it
 
+   Still after decades of studying dwarf galaxies, the formation and evolution of these objects is considered an active debate. Over the past few years, alongside improvement of observation the idea behind the lifeline of these faint and small objects had become clearer (e.g. Ry$\acute{s}$ et al. 2013, Toloba et al. 2015, Venhola et al. 2018). However, the need for more detailed and precise data to close this debate is still on the table. Thus with high resolution multiplexing deep-SAMI data cubes and statistically significant sample of dEs in Fornax cluster, we've started a new journey to collect new information from kinematics, chemical composition and structure of these faint objects. Why studying these faint objects is important, how we approached these questions, and what new results and clues are accomplished are the questions which are going to be investigated in this research.
 
+%\subsection{Why Fornax cluster? Why dwarf galaxies?}
+Different theories and ideas about the formation history and evolution of the big zoo of galaxies in different environments have been developed in the past decades. Dressler (1980) discovered the commonness of each galaxy morphology in different environment, as which in the local Universe red early-type galaxies mostly appear in dense regions while late-type spiral galaxies tend to avoid higher density environments. Notably low mass galaxies such as dwarf elliptical galaxies are seen as the dominant population in  in big groups and clusters (Binggeli et al. 1990, Moore et al. 1998, Boselli et al. 2008; Serra et al. 2012 etc.). Luminosity function of galaxies within cluster and field are also seen to be strongly different (Binggeli et al. 1988). The strong morphology-density relation in nearby galaxy clusters (Cappellari 2016) indicates that for galaxies inside clusters one of the main drivers of their evolution is environmental effect such as ram-pressure stripping (Lin \& Faber 1983), harassment (Moore et al. 1998), or starvation (Larson et al. 1980). 
+Galaxies upon accretion into the dense environment of galactic clusters and while passing through the intracluster medium with high velocity experience various environmental mechanisms. In clusters with large mass ($\sim10^{14-15}M_{\odot}$) and so strong potential well repeated tidal interactions occur between high velocity galaxies and between galaxies and the cluster potential. This effect which is called harassment influences stellar mass, dark matter and gas content of the galaxy and can convert morphology of the object (Mastropeitro et al. 2005, Fujita 1998). As the outskirt of the galaxy is ripped off galaxies become more compact and their size will be changed (Janze et al. 2016a), but the strength of mass loss from harassment is quite dependent on the orbital velocity of the galaxy (Mastropietro et al. 2005; Smith et al. 2010, 2013 and 2015). Another environmental process is ram-pressure stripping. The deep cluster gravitational potential derives high orbital velocities and hot ionized gas. In clusters with hot gas especially nearby their centers, cold gas component of the galaxy will be partly removed in each crossing through the hot emitting gas of the cluster (Gunn \& Gott 1972, ). Dwarf galaxies with blue center (Lisker et al. 2006), HI tails of in-falling late-type galaxies (Kenney et al. 2004; Jaffe et al. 2018) and the gas richness of field galaxies compared to cluster galaxies (Solanes et al. 2001; Serra et al. 2012) are indications of ram-pressure in clusters. When ram-pressure stripping is strong it can remove the atomic gas disk (Boselli et al. 2008) and when it's not strong enough it can still strip away the warm ionized halo gas of the galaxy (Font et al. 2008; McCrthy et al. 2008; Bekki 2009). This process is known as starvation and stops the cooling process of hot halo and so forcing the galaxy to use up its last disk gas (Larson et al. 1980).
 
+Fornax cluster with the distance of 19.95 Mpc (Tonry et al. 2001) and the distance modulus of 31.43 is the second closest cluster to us. Compared to Virgo cluster it's older and more dynamically evolved, but less studied. It's smaller, denser and has still very active environment (Zabel et al. 2019) that strongly influences even the tightly bound molecular gas of its members. This cluster with the central mean recession velocity of $1493\pm36$ $km^{-1}$, a virial mass of $M=7\times10^{13}M_{\odot}$ and virial radius of $4^{\circ}$ or 1.4 Mpc is located in the southern sky in the Fornax-filament of the cosmic web (Nasonova et al. 2011) and consist of hundreds of faint galaxies $M_B>-18$ (Ferguson 1989; Venhola et al. 2018). Fornax cluster despite its low mass has very dense center similar to central density of the more massive Virgo cluster, and so galaxies in the cluster core tend to experience frequent tidal interactions with other galaxies, their material be ripped off and become denser, harassment. Moreover the intensity of the hot X-ray gas in the inner cluster $100$ kpc (Paolilloet al. 2002) with a mass of $M\approx 10^{11}M_{\odot}$ increases the chances of ram pressure stripping and so changing stellar population of its galaxies. The dynamically evolved center of the cluster and evolved galaxy population are a signature that galaxies have spent few Gyrs in the cluster environment and travelled few times through the cluster center (Drinkwater et al. 2001) and consequential significant intracluster stars (Pota et al. 2018). Specially dwarf galaxies through strong gravitational interactions can end up completely disrupted and filling up the intracluster medium (McGlynn 1990; Koch et al. 2012). Also the high fraction of early-type galaxies $87\%$ (Ferguson 1989) suggest that during their stay in the cluster they were not forming many stars.
+
+%\subsection{What do we know about dwarfs?}
+Faint objects such as dwarf galaxies because of their low mass and so lower gravitational potential are powerful probes to environmental processes. Dwarf galaxies despite their plain appearance and smooth light distribution have complex characteristics (Lisker 2006), which indicate the influence of environment in their past. \textit{Spatial distribution of dwarfs}: early-type dwarf galaxies (dEs) outnumber all other galaxy types in dense environment, like clusters, while late-type low-luminosity galaxies are the dominant population in the fields (e.g. Dressler 1980, Sandage et al. 1985, and Ferguson \& Bingelli 1994). \textit{Inner structure vs. local density of dEs}: A substructure-density relation is seen in early-type dwarf galaxies, such that dEs with blue center or no nucleus are mostly found in low-density cluster regions, dEs with disks in intermediate-density regions, and nucleated dEs in high-density regions of the cluster (Ferguson \& Sandage 1989, van den Bergh 1986, and Lisker et al. 2007). \textit{Color vs. local density of dEs}: dEs in higher density regions are redder compared to other regions (Lisker et al. 2008). \textit{Kinematics vs. local density of dEs}: pressure supported dEs are mostly found in high density regions of cluster, whereas in lower density regions like outskirts the angular momentum of dEs increases and dEs are largely rotationally supported. Also fast rotators in the outer part of the cluster rotate faster than fast rotators in the inner parts of the cluster (Toloba et al. 2009, van Zee et al. 2004a, and Toloba et al. 2015). Dwarf galaxies's formation history is another key to the formation and evolution of galaxies; whether dwarf galaxies are the descendants in hierarchical structure formation (Moore et al. 1999) and were created by gravitational collapse like other galaxies (Kauffmann \& White 1993), or whether they were formed at later epoch from late-type low-luminosity star forming galaxies by environmental effects (Boselli \& Gavazzi 2006, Gavazzi et al. 2013, and Boselli \& Favazzi 2014). The answer to these questions could be achieved by pursuing the behaviour and location of these galaxies inside galaxy physical parameter space. \textit{Surface brightness profile}: logarithm of the S$\acute{e}$rsic index of both dwarfs and giant early-type galaxies linearly increases with central surface brightness and magnitude, but SB profiles of dEs are less steep than massive ellipticals (Gavazzi et al. 2005, Graham \& Guzm$\acute{a}$n 2013, and Young \& Currie 1994). \textit{Color magnitude relation}: there is no gap seen between dwarfs and giant ellipticals in color magnitude profile (e.g. Ferrarese et al. 2006, Janz \& Lisker 2009, and Misgeld et al. 2008\&2009). \textit{Fundamental plane}: inside fundamental plane it's been seen that dEs are offset with respect to the plane of early-type galaxies (Toloba et al. 2012 and Rijcke et al. 2015). \textit{Disky substructure}: disk-like structures have been seen in fast rotators and dEs in the outer regions of cluster, also they have rotation curves similar to those of late-type galagixes (Toloba et al. 2015 and Toloba et al. 2009). \textit{Star formation}: As the galay's luminosity decreases the duration of star formation increases (Gavazzi et al. 2002), also $H_\beta$ absorption index increases from giants to dwarfs as luminosity and velocity dispersion decreases (Poggianti et al. 2001 and Geha et al 2003). 
+
+ This is the second paper of the SAMI Fornax Dwarfs Survey series, and is dedicated to kinematic studies of dwarf early-type galaxies within Fronax galaxy cluster. In sect. 2 we describe the SAMI Fornax IFU data set, its comparison to previous observations, and the chosen photometric catalog. The methods used for an section 3 \& 4, we'll explain the methods that have been used and our results respectively. Finally, Section 5 will present the discussion and conclusions.   
 
 
 
 
 
 %__________________________________________________________________
-
 \section{Data}
 
-The SAMI Fornax project started in 2015 with the Sydney-AAO Multi-Object Integral-field (SAMI) spectrograph on the Anglo-Australian Telescope (AAT), with aim of studying the origin and the inner workings of dwarf galaxies inside Fornax cluster. As results of total ?? allocated nights in 2015B, 2016B and 2018B, we have ?? dwarf galaxies, ?? giant elliptical galaxies with good spectra.\\
-SAMI is an integral-field spectrograph equipped by 13 fiber-based IFUs called hexabundles, and 26 pluggable sky fibers (Bryant et al. 2014). Each hexabundle with a field-of-view of $15''$ diameter, is made of 61 1.6-arcsecond optical fibers. These hexabundles have physical size <1 mm, with a filling fraction of 73 per cent and together with sky fibers each fits into pre-drilled holes in a field plate. The plug plate with about 1 degree field-of-view is installed a the AAT's Prime Focus Camera top end and so hexabundle's face is placed at the focal plane of the telescope. 
-To study structure of low-mass galaxies such as dEs in Fornax cluster, high resolution spectra and high S/N were needed. With 1500V gratings in blue and 100R gratings in red, our data has resolution of ~5100 (FWHM $= 1.0 \AA$) in blue ($\sim4660-5430A^o$) and ~4300 (FWHM $= 1.6 \AA$) in red ($6250-7350A^o$). Which means ambitiously reaching around 25 km/s and 30 km/s velocity dispersion in blue and red respectively. And with fourteen ~30 minutes exposure times for each field gaining high S/N became possible. Moreover compared to single IFU instruments we can simultaneously observe 12 galaxies and one calibration star which significantly increases the observation rate.
-
-Most of the previous surveys are long slit, which make them susceptible to aperture
-effects. While Integral Field Spectroscopy spatially resolves each galaxy and gives
-different spectra at different parts of the galaxy. Also current IFU surveys (e.g.
-SAMI Galaxy Survey, MANGA) are not useful for the study of dEs due to sensitivity, effective spatial resolution and most importantly spectral resolution limitations. A comparison between theses projects can be seen in table 1.
-
-
 \begin{table}
-\tiny
 \centering
 \caption{Projects on Dwarf Galaxies} % title of Table
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{cccccc} % centered columns (4 columns)
-\hline\hline %inserts double horizontal lines
+\hline\hline\\ %inserts double horizontal lines
 Survey & No. & $\lambda$ & FWHM & Cluster & Telescope \\ [0.5ex] % inserts table
-\hline
+\hline\\
 && 4660-5430 (B)& 1.0\\[-1ex]
 \raisebox{1.5ex}{SAMI\_Fornax} &\raisebox{1.5ex}{60}& 6250-7350 (R) &1.6 &  \raisebox{1.5ex}{Fornax} & \raisebox{1.5ex}{SAMI@AAO} \\ [1ex]
-\hline
+\hline\\
 SAURON &12& 4760-5300 & 3.9 & Virgo & WHT@ING \\
-\hline % inserts single horizontal line
+\hline\\ % inserts single horizontal line
  &10& 4600-5600 & 1.6 & Virgo & INT@ING\\ % inserting body of the table
 &&4200-5000 (B) &1.4 \\[-1ex]
 \raisebox{1.5ex}{SMACKED}&\raisebox{1.5ex}{26} &5500-6700 (R)& 3.2 & \raisebox{1.5ex}{Virgo} & \raisebox{1.5ex}{WHT@ING} \\
  &3& 4500-5600 & 2.7 & Virgo &  VLT@ESO\\
-\hline
+\hline\\\
 && 3500-7100 (B)& 1.6 & &WHT\&INT@ING\\[-1ex]
 \raisebox{1.5ex}{MAGPOP} &\raisebox{1.5ex}{4}& 8000-9100 (R) &3.2 &  \raisebox{1.5ex}{Virgo} & TNG@INAF \\ [1ex] % [1ex] adds vertical space
 
 \hline
 \end{tabular}
+}
 \label{CompDwrf} % is used to refer this table in the text
 \end{table}
-
-Our sample was selected based on Fornax Deep Survey (FDS). Considering the aim was to study star formation and evolution of dEs within Fornax cluster, the primary survey targets are FDS galaxies that cover $ -18<M_r<-14.5$ and $17<\mu_r<23$, also in different environments from center of the cluster to outside of its virial radius ($4^{\circ}$ or 1.4 Mpc) such as dEs in Fornax A. In total around 100 galaxies were observed, but we had to eliminate about half of them since they were too faint and had noisy spectra that couldn't be fitted by pPXF even when their light was integrated. This resulted in a complete sample of 48 early-type galaxies, mostly dwarf elliptical galaxies which are listed in table ?? \textbf{[table of galaxies to be added]}. In the following section we describe the methods used for extraction of kinematics of these objects.
-
 
 \begin{table*}
 \begin{center}
@@ -190,61 +191,69 @@ FCC51 & FDS21\_DWARF129 & 2018 & 51.776043 & -36.636787 & 4.45$\pm$0.52 & -14.15
 \end{center}
 \end{table*}
 
+The SAMI Fornax project started in 2015 with the Sydney-AAO Multi-Object Integral-field (SAMI) spectrograph on the Anglo-Australian Telescope (AAT), with aim of studying the origin and the inner workings of dwarf galaxies inside Fornax cluster. As results of total 17 allocated nights in 2015B, 2016B and 2018B, we have 38 dwarf galaxies ($M_r>-19$), 12 giant elliptical galaxies with successful stellar kinematic measurements. The observing strategy and in detail description of the sample is described in paper I by N. Scott et al. (2019), but for completeness a short description will also be given here. 
+
+SAMI is an integral-field spectrograph equipped by 13 fiber-based IFUs called hexabundles, and 26 pluggable sky fibers (Bryant et al. 2014). Each hexabundle with a field-of-view of $15''$ diameter, is made of 61 1.6-arcsecond optical fibers. These hexabundles have physical size <1 mm, with a filling fraction of 73 per cent and together with sky fibers each fits into pre-drilled holes in a field plate. The plug plate with about 1 degree field-of-view is installed a the AAT's Prime Focus Camera top end and so hexabundle's face is placed at the focal plane of the telescope. 
+To study structure of low-mass galaxies such as dEs in Fornax cluster, high resolution spectra and high S/N were needed. With 
+the  double-armed AAOmega spectrograph having 1500V gratings in blue and 100R gratings in red, our data has resolution of ~5100 (FWHM $= 1.0 \AA$) in blue ($\sim4660-5430\AA$) and ~4300 (FWHM $= 1.6 \AA$) in red ($6250-7350A^o$). Which means successfully reaching around 12 km/s and 15 km/s velocity dispersions in blue and red respectively. And with fourteen ~30 minutes exposure times for each field gaining high S/N became possible. \\
+Compared to single IFU instruments SAMI could simultaneously observe 12 galaxies and one calibration star which significantly increases the observation rate.
+Also most of the previous surveys are long slit, which make them susceptible to aperture effects, while Integral Field Spectroscopy spatially resolves each galaxy and gives different spectra at different parts of the galaxy. Current IFU surveys (e.g. SAMI Galaxy Survey, MANGA) are not useful for the study of dEs due to sensitivity, effective spatial resolution and most importantly spectral resolution limitations. A comparison between theses projects can be seen in table 1.
+
+Our science targets were selected in 2015 from Fornax Cluster Catalog (FCC, Feguson 1989) and in 2016 \& 2018 from Fornax Deep Survey (FDS, Venhola et al. 2018) dwarf galaxy catalog. Since the aim was to study star formation and evolution of dwarf-elliptical galaxies within Fornax cluster, the primary survey targets are dEs that cover $ -18<M_r<-14.5$ and $17<\mu_r<23$, however to allocate all 13 hexabundles of each pointing of the $1^o$ diameter plate other dwarf galaxies, giant ellipticals even background galaxies were also included in the target selection. 
+The observations covered 90 objects in the main cluster up to $2^o$  away from the NGC 1399, and 9 objects in Fornax A, even though about half of them were excluded since their spectra were too faint and noisy to measure their kinematic parameters. In detail description of the methods used for analysis of IFU spectra will be followed in the next section. 
+
+The sample selection was mainly done by deep imaging data from the Fornax Deep Survey (Venhola et al. 2018) dwarf galaxy catalog. This multiband optical images ($\approx1$ arcsec) include 564 dwarf galaxies in the Fornax cluster and the in-falling Fornax A subgroup. The survey was excecuted using the OmegaCAM (Kuijken et al. 2002) instrument on the survey telescope of the 2.6m Very Large Telescope (Schipani et al. 2012) in Cerro Paranal, Chile. FDS cover a 26 deg$^2$ area of the cluster up to its virial radius in u$'$, g$'$, r$'$, and i$'$ bands, with the liming magnitude of $M_{r'}=-10.5$ mag, and the limiting mean effective surface brightness of  $\bar{\mu}_{e,r'}=26$ mag arcsec$^{-2}$. The detail of 50 SAMI Fornax galaxies are presented in table 4. For further photometric parameters refer to FDS catalog. 
+
 
 \section{Methods}
+To extract stellar kinematics or stellar population (Paper III) from absorption-line spectra of galaxies we used the Penalized Pixel-Fitting (pPXF) routine of Cappellari \& Emsellen (2004). pPXF basically is a maximum penalized likelihood approach in pixel space, with the aim of finding an optimal template with the minimum template-galaxy mismatch errors. It finds the best-fitting linear combination of input stellar templates by convolving them with the line-of-sight velocity distribution of the input galaxy's spectra, and then the best-fitting parameters are determined by non-linear chi-squared minimization in pixel space (logarithmically binned in wavelength). During fitting we are extracting the first four Gauss-Hermite moments of the LOSVD (V, $\sigma$, $h_3$, and $h_4$) as far as the S/N of the galaxies accompany.
+For the optimized fitting we include an additive Legendre polynomial of 6th degree and a multiplicative Legendre polynomial of 10 order to correct the stellar template continuum shape. The additive polynomials minimize template mismatch and additionally correct for imperfect sky subtraction. The multiplicative polynomials  correct for imprecision in primary calibration of the spectra and make the fit insensitive to reddening by dust. The best match to SAMI-Fornax's wavelength range and spectral resolution is the empirical single-age single-metallicity population template library Pegase-HR (Le Borgne et al. 2004). Pegase-HR is based on ELODIE, which is a high resolution stellar library of 1959 spectra for 1503 stars with R$=10000$ at $\lambda=550$ nm. The spectra of some of SAMI-Fornax galaxies and their corresponding fits are shown for the blue range in Fig. 1. The black spectrum shows the galaxy spectrum, and the overplotted purple spectrum is the best-fitting stellar template. Below each spectrum, the differences between the galaxy spectrum and the best stellar template are shown as green dots which have beed arbitrarily shifted in the vertical direction for better presentation. \textbf{[add some spectra fitting examples]}\\
+To get a reliable measurement of stellar kinematics a minimum S/N must be available. In our case a $(S/N)_{min}=10$ for velocity and $(S/N)_{min}=15$ for velocity dispersion profiles were efficient. This is achievable by adaptive voronoi binning method of Cappellari \& Copin (2003) in which starting from central pixel the spectra of the neighbouring pixels will be added till the the target S/N is reached. As result the size of bins become larger as they get to outskirts of the galaxies. Then to get a radial profile of each parameter pPXF was run on each Voronoi-binned spectrum. \textbf{[add a map of Fornax cluster in data section and few smaples of maps in the map then refer to them here]}
+In the sample, some galaxies were found to exhibit emission lines, which in these cases we're allowing emission-line regions to be easily masked. Galaxies with prominent emission lines are FCC179, FCC184, FCC29, FCC33, FCC263, FCC181. 
+Errors were estimated through Monte Carlo simulation, in which the input spectrum is perturbed by random values convolved by the sigma of the difference between original and best-fitted template spectra. After around 100 realization, the mean and sigma of the distribution of each kinematic parameter will be calculated, and this sigmas are estimates of the errors.
 
-To extract stellar kinematics or stellar population (3rd paper) from absorption-line spectra of galaxies we used the Penalized Pixel-Fitting method (pPXF). 
-We extracted stellar kinematics  and stellar population (3rd paper) from absorption-line spectra of our galaxies by using the penalised Pixel Fitting (pPXF) routine of Cappellari \& Emsellen (2004). pPXF basically is a maximum penalized likelihood approach in pixel space, with the aim of finding an optimal temple with the minimum template-galaxy mismatch errors. It finds the best-fitting linear combination of input stellar templates by convolving them with the line-of-sight velocity distribution of the input galaxy's spectra, and then the best-fitting parameters are determined by non-linear chi-squared minimization in pixel space (logarithmically binned in wavelength). The best match for SAMI-Fornax's wavelength range and spectral resolution is single-age single-metallicity population models of PÉGASE-HR (Le Borgne et al. 2004). PÉGASE-HR is the result of applying the PÉGASE.2 code on ÉLODIE.  ÉLODIE is a high resolution stellar library of 1959 spectra for 1503 stars with R=10 000 at lambda=550 nm.
-%N. Kacharov et al. 2018 --> The SSP models are computed using the Padova isochrones (Bertelli et al.1994), assuming a Kroupa initial mass function (IMF; Kroupa 2001), and normalized to present day mass of 1 Solar mass. They include mass loss from supernovae ejecta (Woosley  &  Weaver 1995)  and  stellar  winds.  They  have  a  resolution R=10^4 and  cover  a  wavelength  range  between  3900 and 6800 Å. The grid covers seven metallicity bins with a range −2.3<[Fe/H]<+0.7, assuming a scaled Solar abundance pattern, and 68 irregularly spaced age bins between 1 Myr and 20 Gyr
-\\ During spectra fitting with pPXF we also include an additive Legendre polynomial of 6th degree and a multiplicative Legendre polynomial of 10 order to correct the template continuum shape during the fit. They're in account for ??. For all of the galaxies we measure the Gauss-Hermite moments of the LOSVD up to $h_4$, even though at our minimum S/N~?? the data is unable to constrain all of the V, $\sigma$, $h_3$, and $h_4$ parameters.In pPXF one can also fit the gas emission lines together with the stellar kinematics and population. But for the current work since not all of the galaxies have emission lines, we avoid regions with emission lines by simply masking them to gain the best fitting spectra. Another interesting feature in this method is regularization which is used to reduce the noise in the recovery of the stellar population parameters and more importantly it attaches a physical meaning to the output weights assigned to the best-fitting template in term of the star formation history (SFH) or metallicity distribution of each galaxy. This feature was important in stellar population of our galaxies (SAMI-Fornax paper 3).
+%N. Kacharov et al. 2018 --> The SSP models are computed using the Padova isochrones (Bertelli et al.1994), assuming a Kroupa initial mass function (IMF; Kroupa 2001), and normalized to present day mass of 1 Solar mass. They include mass loss from supernovae ejecta (Woosley  &  Weaver 1995)  and  stellar  winds.  They  have  a  resolution R=10^4 and  cover  a  wavelength  range  between  3900 and 6800 �. The grid covers seven metallicity bins with a range −2.3<[Fe/H]<+0.7, assuming a scaled Solar abundance pattern, and 68 irregularly spaced age bins between 1 Myr and 20 Gyr.
 
-In case of galaxies with emission lines we avoid regions with emission lines by simply masking them, which is also possible by gas feature within the latest version of pPXF. Galaxies with prominent emission lines are ??. Moreover, We computed the uncertainties by (100 realizations) Monte Carlo simulations. In each loop the best-fitted spectra is disturbed by random spectra convolved by the sigma of the difference between original and best-fitted template spectra.  
+%In pPXF one can also fit the gas emission lines together with the stellar kinematics and population. But for the current work since not all of the galaxies have emission lines, we avoid regions with emission lines by simply masking them to gain the best fitting spectra. 
 
-For kinematic maps to have accurate measured velocity and velocity dispersion we require high S/N. This can be achieved by Voronoi binning algorithm (Cappellari \& Copin 2003), which starts from the central pixels with highest S/N and accretes closes neighboring pixels to reach the target S/N. We chose $(S/N)_{min}=15$ for velocity dispersion maps and $(S/N)_{min}=10$ for Velocity maps, which is a comprise between assurance of the reliability of extracted kinematics and spatial resolution of images.
+%Another interesting feature in this method is regularization which is used to reduce the noise in the recovery of the stellar population parameters and more importantly it attaches a physical meaning to the output weights assigned to the best-fitting template in term of the star formation history (SFH) or metallicity distribution of each galaxy. This feature was important in stellar population of our galaxies (SAMI-Fornax paper 3).
 
-In order to check the accuracy of our results, we compared them with Toloba et al. 2011 study on dwarf galaxies which can be seen in plot ??. Our measurement show ...
+%In order to check the accuracy of our results, we compared them with Toloba et al. 2011 study on dwarf galaxies which can be seen in plot ??. Our measurement show ...
 
 \section{Scaling Relations}
-To understand the origin of dwarf galaxies, the role of environment in evolution of these low-mass stellar systems and also their dark matter content, we analyze their fundamental kinematic scaling relations. Manifolds of galaxy properties such as the Faber-Jackson, the fundamental Plane (FP), the color-velocity dispersion relation, and etc. 
+To understand the origin of dwarf galaxies, the role of environment in evolution of these low-mass stellar systems and also their dark matter content, we analyze their scaling relations and how deviations from them depend on kinematics or stellar population of galaxies. Manifolds of galaxy properties such as the Faber-Jackson, the fundamental Plane (FP), the color-velocity dispersion relation, and etc. \textbf{[Say more about scaling relations in general]}
 
-\subsection{Faber Jackson}
-
-%\begin{figure*}[!htb]
-%   \centering
-%   \includegraphics[width=37cm,height=8cm,keepaspectratio]
-%   {../2_pipeline/1_FJ/Faber_Jackson_x-axis=M_r.pdf}
-%         \caption{Faber Jackson Relation}
-%         \label{fig:FJ}
-%\end{figure*}
+\section{Faber Jackson}
 
 \begin{figure*}[!htb]
    \centering
-   \includegraphics[width=20cm,height=8cm,keepaspectratio]
+	\includegraphics[width=20cm,height=8cm,keepaspectratio]
+   {../2_pipeline/1_FJ/Faber_Jackson_x-axis=M_r_EXC.pdf}   
+	\caption{Faber Jackson Relation - SAMI-Fornax galaxies color coded by surface brightness}
+     \label{fig:FJ(SAMI)}
+\end{figure*}
+
+\begin{figure*}[!htb]
+   \centering
+   \includegraphics[width=17cm,height=9cm,keepaspectratio]
    {../2_pipeline/2_FJ_onlydE+useLiter/Faber_Jackson_onlyDWARF+useLiter.pdf}
-         \caption{Faber Jackson Relation}
-         \label{fig:FJ}
+	\caption{Faber Jackson Relation - SAMI-Fornax Dwarf ellipticals + Toloba et al. 2014 + Falcon-Barroso et al. 2010 }
+     \label{fig:FJ(SAMI+Liter)}
 \end{figure*}
 
 One of the first discoveries in early-type galaxies was that their stellar velocity dispersion correlates with their luminosity (Faber \& Jackson 1967). This 2 dimensional realtion $L\propto\sigma^\alpha$, Faber-Jackson relation is in fact a projection
 %a narrow plane called%
- of Fundamental Plane. It has been shown that the slope of this relations gets shallower as it goes to fainter objects (Davies et al. 1983). In Fig.\ref{fig:FJ} we go down to faint low-mass galaxies of $M\sim 10^{7.4}M_\odot$ color coded by surface brightness within effective radius. \textbf{[what we see?]}\\
+ of Fundamental Plane. 
+% It has been shown that the slope of this relations gets shallower as it goes to fainter objects (Davies et al. 1983). 
+In Fig.\ref{fig:FJ(SAMI)} we go down to faint low-mass galaxies of $M\sim 10^{7.4}M_\odot$, color coded by surface brightness within effective radius.
+As we go to fainter objects we continue to have tight relation, only low-surface brightness galaxies ($\mu_r\approx 23$) as expected \textbf{[?]} are deviating from the line.  
+The field-of-view of SAMI is small and in case of giants they cover only the central part. So from now on instead of using giant ellipticals of SAMI-Fornax we will use similar literature works such as Toloba et al. 2014 and Falcon-Barroso et al. 2011. \textbf{[a small explanation of Their work and data]}. The seen same slope in Fig.\ref{fig:FJ(SAMI)} slope from giants to dwarf ellipticals indicates their similar internal structure. The up-turn at the end of the tail might be a signature of dark matter in faint dwarf galaxies, but it also has to be kept in mind that this could be the limitation of data as we go down to faint object. As can be seen in Fig.\ref{fig:ObserRatio}, the ratio of successful observation to the initial target selection is quite small. So the galaxies at the end of the tail might be just tip of an iceberg.\\
+In paper I angular-momentum of these objects was studied, where dwarf galaxies were not rotating significantly. The average perpendicular distance of our galaxies to the best fitted Faber Jackson line (Fig. 2), respect to different parameters such as $\lambda_R$, $<\mu_r>$, $g-r$, and $log(\sigma)$ are shown in Fig.4. As indicated above there is a clear relation between surface brightness and residuals. Moreover, \textbf{[??]} \textbf{[add three more plots for this section]}
 
 %As central velocity dispersion is an indicator of total mass in dispersion supported galaxies, a complimentary comparison would be between stellar mass and velocity dispersion of these objects Fg.\ref{fig:M-S}. 
-%\begin{figure*}[!htb]
-%   \centering
-%   \includegraphics[width=20cm,height=8cm,keepaspectratio]{../2_pipeline/3_Mstellar_disp+Toloba/Mstellar_Disp+Toloba.pdf}
-%         \caption{Sellar Mass vs. Velocity dispersion}
-%         \label{fig:M-S}
-%\end{figure*}
 
-\subsection{Fundamental Plane}
-%\begin{figure*}[!htb]
-%   \centering
-%   \includegraphics[width=32cm,height=8cm,keepaspectratio]{../2_pipeline/1_FP_LAD/FP_LAD_x=logR_error_EXC.pdf}
-%  \includegraphics[width=32cm,height=8cm,keepaspectratio]{../2_pipeline/1_FP_LAD/FP_LAD_x=logS_error_EXC.pdf}
-%         \caption{Fundamental plane in two different Projections \textbf{[two elongated ones must be shown with different symbols]}}
-%         \label{fig:FP}
-%\end{figure*}
+\section{Fundamental Plane}
+
 \begin{figure*}[!htb]
    \centering
 %   \includegraphics[width=20cm,height=8cm,keepaspectratio]{../2_pipeline/2_FP_LAD_onlydE+useLiter/FP_LAD+Liter_x=logR_DWARF.pdf}
@@ -258,34 +267,43 @@ The empirical Fundamental plane which is a bivariate relation (Brosche 1973, Dre
 	log(R_e) = \alpha log(\sigma) + \beta <\mu_e> + \gamma
 \end{eqnarray}
 where $<\mu_e>$ is the mean surface brightness in $mag/arcsec^{2}$ defined as $-2.5log(I_e)+cte$. 
-The derived coefficients of FP (Bernardi et al 2003) are not exactly the same as the predicted ones from the virial theorem . This deviation of coefficients (tilt) also tightness of the plane have always been some of the keys for better understanding evolution of galaxies, their structure and stellar population, or even dark matter content of galaxies (Renzini \& Ciotti 1993, ,  Borriello et al. 2003). \textbf{[some examples of $\alpha$ and $\beta$ from literature]}
+In this 3D space, elliptical galaxies lie on the plane with small scatter of $\sim0.1$ dex (Jorgensen et al. 1996; Bernardi et al. 2003), but other dynamically hot systems follow the planes with significantly different slopes and intercept values (Burstein et al. 1997; Schaeffer et al. 1993). Also the derived coefficients of FP (Bernardi et al 2003) are not exactly the same as the predicted ones from the virial theorem. This deviation of coefficients (tilt) also tightness of the plane have always been some of the keys for better understanding the evolution of galaxies, their structure and stellar population, or even dark matter distribution within different galaxies (Renzini \& Ciotti 1993; Borriello et al. 2003).
 %The observed coefficients of FP are different from the predicted ones of the virial theorem. This 'tilt' of the FP might be due to different formation histories and evolutionary processes, or it can be explained by the evolution of M/L as a function of stellar population (age, metalicity, and initial mass function), also possible dark matter content.
-\\In this projection of FP (eq. 1) which is commonly used all distance-dependent quantities, velocity dispersion and surface brightness, are collected in one side. But we will also study the other projection $log(\sigma) = \alpha' log(R_e) + \beta' <\mu_e> + \gamma'$, which here dependent variables $R_e$ and $\mu_e$ are in one side. For calculation of error bars in this projection we also need covariance matrix between $R_e$ and $\mu_e$.
+In the edge-on view of FP (eq. 1) all distance-dependent quantities, velocity dispersion and surface brightness, are collected in one side. The inverse relation between $R_e$ and $I_e$ is one of the keys to existence of the FP, which in the face-on view $log(\sigma) = \alpha' log(R_e) + \beta' <\mu_e> + \gamma'$ they are in one side. For calculation of error bars in this projection we use covariance matrix between $R_e$ and $\mu_e$ of FDS, table. ??.
 
-The common way to find this best fitted plane in the three dimensional space of ($logR_e$, $\mu_e$, $log\sigma$) is least absolute deviation orthogonal fit (e.g. J\o rgensen et al. 1996, Falc$\acute{o}$n-Barroso et la. 2011, and Cappellari et al. 2013). The advantage of least absolute deviation to the famous least-square deviation is that by treating all parameters symmetrically it's relatively insensitive to few outliers. In this method the residuals perpendicular to the plane are 
+There are multiple ways to define the residuals to the plane and find this best fitted plane in the three dimensional space of ($logR_e$, $\mu_e$, $log\sigma$). In the direct method (Bernardi et al. 2003) residuals along one axis (mostly $r_e$) is minimized, while in the orthogonal fit the three-dimensional orthogonal fit is minimized. The most common way for the FP, also our chosen method, is the least absolute deviation instead of the usual least-square deviation (e.g. J\o rgensen et al. 1996, Falc$\acute{o}$n-Barroso et la. 2011, and Cappellari et al. 2013) as it's relatively insensitive to few outliers and more robust by treating all parameters symmetrically (Jorgensen et al. 1996; La Barbera et al. 2010). Also in comparison with other results of various studies, it's important that the same method was used throughout all works. So the residuals perpendicular to the plane are 
 \begin{eqnarray}
 	D = \frac{| log(R_e)-\alpha log(\sigma)-\beta <\mu_e>-\gamma |}{\sqrt{\alpha^2+\beta^2+1}}
 \end{eqnarray}
-Also the uncertainties of coefficients are derived by bootstrap procedure \textbf{[must be done]}. Even though the FP in Fig.\ref{fig:FP} is derived from least-absolute deviation method, the FP we got from least-square deviation is quite similar since we didn't have any significant outliers in SAMI-Fornax data sample.
-\\In integrated galaxy specra, lines broadening  can be caused by both velcoity dispersion and the galaxy's rotational velocity. The effect of $V_{rot}$ will more prominent in elongated rotational galaxies such as FCC177 and FCC153. Without considering their rotational velocity they will deviate from FP, so we didn't include them in FP fitting.
-\\
-\textbf{[when bring up the comparisons with literature such as Toloba et al. 2011?]}\\
+Even though the FP in Fig.\ref{fig:FP} is derived from least-absolute deviation method, the FP we got from least-square deviation was quite similar since we do not have any significant outliers in SAMI-Fornax data.
+The uncertainties of coefficients are derived by bootstrap procedure \textbf{[To Do]}.
 
-... But since our galaxy is concentrated on elliptical galaxies and so dispersion supported $\sigma$ is the measure of the mass of each galaxy...
-\cite{Barat2019}
-... Replacing velocity dispersions of our giant galaxies with Fornax3D results did not show prominent difference in FP. So we will stick with SAMI-fornax results for both giant and dwarf galaxies, as standard properties calculated from different methods are tended to have different systematic errors. ... 
+The best orthogonal fits for our SAMI-Fornax sample, Toloba et al. 2014, and Faber-Jackson 2011 are\\
+\textit{face-on view}:
+\begin{eqnarray}
+    log(\sigma) = 0.73\;log(R_e) - 0.22 <\mu_e> +\;6.30
+\end{eqnarray}
+\textit{edge-on view}:
+\begin{eqnarray}
+	log(R_e) = 1.12\;log(\sigma) + 0.24 <\mu_e> -\;6.75
+\end{eqnarray}
 
-\subsection{Fundamental Plane in the $\kappa$-space}
-For more transparent analysis of FP, Bender et al. (1992) defined a new coordinate system by a simple orthogonal coordinate transformation of the 3 dimensional space of ($logR_e$, $logI_e$, $log\sigma^2$) as following
-\begin{align}
-\kappa_1 &\equiv(log{\sigma_0}^2+log r_e)/\sqrt{2} \\
-\kappa_2 &\equiv(log{\sigma_0}^2+2logI_e-log r_e)/\sqrt{6} \\
-\kappa_3 &\equiv(log{\sigma_0}^2-log I_e-log r_e)/\sqrt{3}
-\end{align}
-By defining luminosity and mass as $L=c_1I_e{r_e}^2$ and $M=c_2{\sigma_0}^2r_2$, each of the coordinates will have a specific physical meaning. $\kappa_1$ being representative of galaxies size or logarithm of mass, $\kappa_2$ being representative of the logarithm of $M/L$ and $\kappa_3$ being representative of the logarithm of $(M/L){I_e}^3$. Also in $\kappa$ coordinate system $\kappa_1-\kappa_2$ and $\kappa_1-\kappa_3$ projections correspond to face-on and edge-on viwe of FP respectively.\\
-In Fig.\ref{fig:FPkappa} we see distribution of SAMI-Fornax galaxies in kappa space, together with Toloba et al. (2011) sets of dwarf galaxies within Virgo galaxies. Their observations were done in V and K band , so we needed to transform them to r band first by using transformations between magnitude systems. 
-%when we have a young and a faint galaxy, the younger galaxy has lower $\mu$ and so is brighter compared to the old galaxy. Also the color of the older one is redder. This fact is called fading.%
- \textbf{[what we see?]}
+As expected since one more parameter is included in the fitting of FP compared to FJ, the scatters of points become less. In contrast to previous works (e.g. Kourkchi et al. 2012, Toloba et al. 2012), we see that faint dwarf galaxies lie on the FP of their brighter counterpart. And again the upturn of dEs in the faintest region might be due to selection effect, since the S/N of galaxies with lower dispersions could be too low to measure kinematics on.
+\\The rms scatter about the FP is ?? dex. \textbf{[To Do]}
+
+%In integrated galaxy specra, lines broadening  can be caused by both velocity dispersion and the galaxy's rotational velocity. The effect of $V_{rot}$ will more prominent in elongated rotational galaxies such as FCC177 and FCC153. Without considering their rotational velocity they will deviate from FP, so we didn't include them in FP fitting.
+
+%Zartisky et al. 2006 argues that a simple plane is not enough to explain this unifying relationship. 
+
+%... But since our galaxy is concentrated on elliptical galaxies and so dispersion supported $\sigma$ is the measure of the mass of each galaxy...\cite{Barat2019}
+
+%... Replacing velocity dispersions of our giant galaxies with Fornax3D results did not show prominent difference in FP. So we will stick with SAMI-fornax results for both giant and dwarf galaxies, as standard properties calculated from different methods are tended to have different systematic errors. ... 
+
+I conclude this section by placing ....
+... suggesting a physical connection ...
+
+
+\subsection{Fundamental Plane in $\kappa$-space}
 \begin{figure}[!htb]
    \centering
    \includegraphics[width=10cm,height=8cm,keepaspectratio]
@@ -294,36 +312,20 @@ In Fig.\ref{fig:FPkappa} we see distribution of SAMI-Fornax galaxies in kappa sp
          \label{fig:FPkappa}
 \end{figure}
 
-\subsection{Dynamical Mass}
-Variety in dark matter fraction of dEs can be accounted as one of the reasons for deviation of dEs from FP (e.g. Reda et al. 2005) or even FP tilt (e.g. Cappellari et al. 2006, and Graves \& Faber 2010). We measure dynamical mass and dark matter fraction of our galaxies within SAMI field-of-view following Wolf et al. 2010. \\Not considering the difference between radial and tangential velocity dispersion weakens the accuracy of conclusions about structure and formations of galaxies. This becomes more important when calculating dynamical mass of a galaxy by only having its 2d observed radial properties. Wolf et al. 2010 using the spherical Jeans equation showed that within $r_3$ radius this difference is insignificant. $r_3$ is where the log-slope of the 3D tracer density profile is -3, and for dispersion supported galaxies it is close to the 3D half-light radius $r_{1/2}$. So the dynamical will be defined as:
-\begin{eqnarray}
-	M_{1/2}\simeq930(\frac{{\sigma_{los}}^2}{{km}^2s^{-2}})(\frac{R_e}{pc})M_{\odot}
-\end{eqnarray}
-where $R_e$ is the 2D projected half-light radius and $\sigma_{los}$ is the line-of-sight velocity dispersion. In Fig.\ref{fig:ML} we expand the relationship between $M_{1/2}$ and the half-light luminosity $L_{1/2}=0.5L$ for elliptical and dwarf elliptical galaxies. The first thing we see is that our galaxies connect well with the brighter dwarfs of Toloba et al (2014) and elliptical galaxies of Falcon-Barroso et al. 2010 both within Virgo cluster also the Local Group dwarfs from Wolf et al (2010). This means that the dark matter properties of these dwarfs in clusters are the same as in the Local Group, implying that the dark matter distribution inside the galaxies is not affected by the cluster environment. Moreover, as emphasized in Wolf et al 2010 and Zaritsky et al. 2006 dEs are sitting at the minimum of the parabola relation between dynamical half-light mass-to-light ratio and velocity dispersion. Position of the minimum and its corresponding mass scales are important as it's the turnover point between two different star formation scenario of bright and faint systems. Three different power-law regimes / two different regimes? what they mean? 
+We conclude this section by studying the FP in $\kappa$-space (Bender et al. 1992).
+For more transparent analysis of FP a new coordinate system is introduced, by a simple orthogonal coordinate transformation of the 3 dimensional space of ($logR_e$, $logI_e$, $log\sigma^2$). By defining luminosity and mass as $L=c_1\,I_e\,{r_e}^2$ and $M=c_2\,{\sigma_0}^2\,r_2$, each of the coordinates will have a specific physical meaning. $\kappa_1$ being representative of galaxies size or logarithm of mass, $\kappa_2$ being representative of the logarithm of $M/L$ and $\kappa_3$ is proportional to the logarithm of $(M/L)\;{\mu_e}^3$. Also in $\kappa$ coordinate system $\kappa_1-\kappa_2$ and $\kappa_1-\kappa_3$ projections correspond to face-on and edge-on viwe of FP respectively.\\
+In Fig.\ref{fig:FPkappa} the projections of SAMI-Fornax galaxies and recent similar studies in $kappa$-space are illustrated. Their observations were done in V and K band, so by using transformations between magnitude systems we transform them to r band first. The different behavior of giant and dwarf ellipticals in the $\kappa_1-\kappa_2$ space is an indication of their different formation scenarios.  \textbf{[what else we see?]}
+%when we have a young and a faint galaxy, the younger galaxy has lower $\mu$ and so is brighter compared to the old galaxy. Also the color of the older one is redder. This fact is called fading.%
 
-\begin{figure}[!htb]
-   \centering
-   \includegraphics[height=25cm]{../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf}   		
-  	 \caption{Dynamical Mass vs. Luminosity ratio \textbf{[info box must be added]}}
-         \label{fig:ML}
-\end{figure}
+\section{Color vs. $\sigma$}
+To see also the relation of dynamical mass of the galaxies with their stellar population w can use $\sigma$-color diagram. In Fig.\ref{fig:CI-S} we see almost a linear trend between various central colors and velocity dispersion of the whole sample of dEs, except dwarfs which bend toward bluer regions. The scatter around this relation can e due to the difference in age, metallicity and also star formation history of galaxies. 
 
-\begin{figure}[!htb]
+\begin{figure*}[!htb]
    \centering
-   \includegraphics[width=8cm]{../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf}   		
-  	 \caption{Stellar Mass vs. Luminosity ratio \textbf{[info box must be added]}}
-         \label{fig:MM}
-\end{figure}
-
-\subsection{Color vs. $\sigma$}
-To have a look at stellar population and ?? of these objects, one can have a look at color versus velocity dispersion relation of them Fig.\ref{fig:CI-S}\\
-\textbf{[Discussion]} 
-\begin{figure}[!htb]
-   \centering
-   \includegraphics[width=10cm,height=20cm,keepaspectratio]{../2_pipeline/1_color_Disp/Color_Disp.pdf}
+   \includegraphics[width=20cm,height=20cm,keepaspectratio]{../2_pipeline/1_color_Disp/Color_Disp.pdf}
          \caption{Color vs. Dispersion}
          \label{fig:CI-S}
-\end{figure}
+\end{figure*}
 
 
 \begin{table*}
@@ -387,6 +389,39 @@ FCC & log($M_*/M_{\odot})_r$ & $\sigma$(km/s) & log($L_{r,1/2}$($L_{Sun}$) & log
 }}
 \end{center}
 \end{table*}
+
+\section{Dynamical Mass}
+
+Variety in dark matter fraction of dEs can be accounted as one of the reasons for deviation of dEs from FP (e.g. Reda et al. 2005) or even FP tilt (e.g. Cappellari et al. 2006, and Graves \& Faber 2010). We measure dynamical mass and dark matter fraction of our galaxies within SAMI field-of-view following Wolf et al. 2010. \\Not considering the difference between radial and tangential velocity dispersion weakens the accuracy of conclusions about structure and formation of galaxies. This becomes more important when calculating dynamical mass of a galaxy by only having its 2d observed radial properties. Wolf et al. 2010 using the spherical Jeans equation showed within $r_3$ radius this difference is insignificant. $r_3$ is where the log-slope of the 3D tracer density profile is -3, and for dispersion supported galaxies it is close to the 3D half-light radius $r_{1/2}$. So the dynamical mass will be defined as:
+\begin{eqnarray}
+	M_{1/2}\simeq930(\frac{{\sigma_{los}}^2}{{km}^2s^{-2}})(\frac{R_e}{pc})M_{\odot}
+\end{eqnarray}
+where $R_e$ is the 2D projected half-light radius and $\sigma_{los}$ is the line-of-sight velocity dispersion. In Fig.\ref{fig:ML} we expand the relationship between $M_{1/2}$ and the half-light luminosity $L_{1/2}=0.5L$ for elliptical and dwarf elliptical galaxies in different environments. The first thing we see is that our galaxies connect well with the brighter dwarfs of Toloba et al (2014) and elliptical galaxies of Falcon-Barroso et al. 2010 both within Virgo cluster also the Local Group dwarfs from Wolf et al (2010). This means that the dark matter properties of these dwarfs in clusters are the same as in the Local Group, implying that the dark matter distribution inside the galaxies is not affected by the cluster environment. The upturns of log(M/L) at both low and high $\sigma$s have been investigated before (e.g. Benson et al 2000; Marinonin \& Hudson 2002; van de Bosch et al. 2003; Zaritsky et al. 2006) and point to the two different galaxy formation history in the smallest and largest dark matter haloes. Winds and UV photonization are considered as the two main processes responsible for the increase of M/L with decreasing $\sigma$ in left side of the parabola by lowering star formation efficiency in low-mass systems. Supernovae winds remove material in the galaxies, and it's more prominent in low mass galaxies because of their weak potential well (Martin 1999; Dekel \& Woo 2003), while the intergalactic UV radiation is ionizing the gas (Babul \&Rees 1992).\\
+Moreover, as emphasized in Wolf et al 2010 and Zaritsky et al. 2006 dEs are sitting at the minimum of the parabola relation between dynamical half-light mass-to-light ratio and velocity dispersion. Position of the minimum and its corresponding mass scales are important as it's the turnover point between two different star formation scenarios of bright and faint systems. Three different power-law regimes / two different regimes? what they mean? 
+
+\begin{figure}[!htb]
+   \centering
+   \includegraphics[height=25cm]{../2_pipeline/2_MassDyn_Luminosity+Liter/DyM-L+Liter_DWARF.pdf}   		
+  	 \caption{Dynamical Mass vs. Luminosity ratio \textbf{[info box must be added]}}
+         \label{fig:ML}
+\end{figure}
+
+\begin{figure}[!htb]
+   \centering
+   \includegraphics[height=25cm]{../2_pipeline/3_ParabolaFit_MassDyn/Paraola_DyM_DWARF.pdf}   		
+  	 \caption{Dynamical Mass vs. Luminosity ratio \textbf{[info box must be added]}}
+         \label{fig:ML}
+\end{figure}
+
+\subsection{Stellar Mass vs. / Sigma}
+
+\begin{figure}[!htb]
+   \centering
+   \includegraphics[width=8cm]{../2_pipeline/2_MassDyn_Luminosity+Liter/DyM_StM+Liter_DWARF.pdf}   		
+  	 \caption{Stellar Mass vs. Luminosity ratio \textbf{[info box must be added]}}
+         \label{fig:MM}
+\end{figure}
+
 
 \section{Phase-Space Diagrams}
 
